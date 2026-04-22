@@ -368,12 +368,20 @@ textarea.form-input{text-align:left;min-height:60px;resize:none;padding:10px 0;f
 .semester-bar-weeks{display:flex;justify-content:space-between;margin-top:6px}
 .semester-bar-week{font-size:11px;color:var(--label-tertiary)}
 
-.countdown-row{display:flex;gap:10px;padding:0 16px 4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.countdown-row{
+  display:flex;gap:10px;padding:0 16px 4px;
+  overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  scroll-snap-type:x mandatory;
+  scroll-padding-left:16px;
+}
 .countdown-row::-webkit-scrollbar{display:none}
 .countdown-card{
   flex-shrink:0;background:var(--bg-elevated);border-radius:14px;
-  padding:14px 16px;min-width:140px;
+  padding:14px 16px;width:150px;
   display:flex;flex-direction:column;gap:4px;
+  scroll-snap-align:start;
+  touch-action:pan-x;
 }
 .countdown-card.urgent{background:#FF3B30}
 .countdown-card.soon{background:#FF9500}
@@ -859,24 +867,22 @@ function renderSemesterBar(today){
 }
 
 function renderCountdowns(today){
-  const end=new Date(today);end.setDate(end.getDate()+90);
+  const end=new Date(today);end.setDate(end.getDate()+120);
   const deadlines=eventsInRange(today,end)
     .filter(e=>['abgabe','klausur','pruefung'].includes(e.cat))
     .sort((a,b)=>a.date.localeCompare(b.date))
-    .slice(0,6);
+    .slice(0,10);
   if(!deadlines.length)return '';
-  let html='<div class="section-hdr">Nächste Deadlines & Klausuren</div><div class="countdown-row">';
+  const hint=deadlines.length>2?`<span style="font-size:11px;color:var(--label-tertiary);font-weight:400;text-transform:none;letter-spacing:0">Wische seitwärts →</span>`:'';
+  let html=`<div class="section-hdr" style="display:flex;justify-content:space-between;align-items:baseline;padding-right:16px"><span>Nächste Deadlines & Klausuren</span>${hint}</div><div class="countdown-row">`;
   deadlines.forEach(e=>{
     const d=parseD(e.date);
     const days=daysBetween(today,d);
     const cls=days<=3?'urgent':days<=10?'soon':'ok';
-    const lbl=days===0?'Heute':days===1?'Morgen':days+' Tage';
-    const unit=days<=1?'':days===1?'':'verbleibend';
     const course=getCourse(e.courseId);
     const cat=CATS[e.cat]||CATS.sonstiges;
-    const dotColor=cls==='ok'?(course?course.color:cat.color):'transparent';
     html+=`<div class="countdown-card ${cls}" onclick="switchView('month');selectDay('${e.date}')">
-      <div class="countdown-num">${days===0?'!':days===1?'1':days}</div>
+      <div class="countdown-num">${days===0?'!':days}</div>
       <div class="countdown-unit">${days===0?'Heute!':days===1?'Morgen':days+' Tage'}</div>
       <div class="countdown-title">${esc(e.title)}</div>
       <div class="countdown-course">${e.timeStart?e.timeStart+' · ':''}${d.getDate()}. ${DE_MONTHS_SHORT[d.getMonth()]}${course?' · '+esc(course.short||course.name):''}</div>
