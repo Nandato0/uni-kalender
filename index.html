@@ -356,6 +356,67 @@ textarea.form-input{text-align:left;min-height:60px;resize:none;padding:10px 0;f
 .install-banner-sub{font-size:13px;opacity:0.9;margin-top:2px;line-height:1.4}
 .install-banner button{background:rgba(255,255,255,0.25);color:#fff;padding:6px 12px;border-radius:14px;font-size:13px;font-weight:500}
 
+.dash-greeting{padding:4px 16px 16px}
+.dash-greeting-sub{font-size:15px;color:var(--label-secondary);margin-top:2px}
+
+.semester-bar-wrap{margin:0 16px 8px;background:var(--bg-elevated);border-radius:14px;padding:14px 16px}
+.semester-bar-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.semester-bar-label{font-size:13px;font-weight:500;color:var(--label)}
+.semester-bar-pct{font-size:13px;font-weight:600;color:var(--blue)}
+.semester-bar-track{height:6px;background:var(--fill-tertiary);border-radius:3px;overflow:hidden}
+.semester-bar-fill{height:100%;border-radius:3px;background:var(--blue);transition:width 0.6s cubic-bezier(0.34,1.56,0.64,1)}
+.semester-bar-weeks{display:flex;justify-content:space-between;margin-top:6px}
+.semester-bar-week{font-size:11px;color:var(--label-tertiary)}
+
+.countdown-row{display:flex;gap:10px;padding:0 16px 4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.countdown-row::-webkit-scrollbar{display:none}
+.countdown-card{
+  flex-shrink:0;background:var(--bg-elevated);border-radius:14px;
+  padding:14px 16px;min-width:140px;
+  display:flex;flex-direction:column;gap:4px;
+}
+.countdown-card.urgent{background:#FF3B30}
+.countdown-card.soon{background:#FF9500}
+.countdown-card.ok{background:var(--bg-elevated)}
+.countdown-num{font-size:32px;font-weight:700;letter-spacing:-1px;line-height:1;color:var(--label)}
+.countdown-card.urgent .countdown-num,.countdown-card.soon .countdown-num{color:#fff}
+.countdown-unit{font-size:12px;color:var(--label-secondary);font-weight:500;margin-top:-2px}
+.countdown-card.urgent .countdown-unit,.countdown-card.soon .countdown-unit{color:rgba(255,255,255,0.8)}
+.countdown-title{font-size:13px;font-weight:500;color:var(--label);line-height:1.3;margin-top:4px}
+.countdown-card.urgent .countdown-title,.countdown-card.soon .countdown-title{color:#fff}
+.countdown-course{font-size:11px;color:var(--label-tertiary);margin-top:1px}
+.countdown-card.urgent .countdown-course,.countdown-card.soon .countdown-course{color:rgba(255,255,255,0.7)}
+
+.week-strip{margin:8px 16px 4px;background:var(--bg-elevated);border-radius:14px;overflow:hidden}
+.week-strip-hdr{display:flex;justify-content:space-between;align-items:center;padding:12px 14px 8px}
+.week-strip-title{font-size:15px;font-weight:600}
+.week-strip-days{display:grid;grid-template-columns:repeat(7,1fr)}
+.week-strip-day{padding:6px 2px 10px;text-align:center;border-top:0.5px solid var(--separator)}
+.wsd-name{font-size:10px;color:var(--label-tertiary);text-transform:uppercase;font-weight:500}
+.wsd-num{font-size:16px;font-weight:500;margin:3px 0;color:var(--label-secondary)}
+.wsd-dots{display:flex;justify-content:center;gap:2px;min-height:5px;margin-top:2px}
+.wsd-dot{width:5px;height:5px;border-radius:50%}
+.week-strip-day.today .wsd-num{
+  background:var(--red);color:#fff;border-radius:50%;
+  width:26px;height:26px;line-height:26px;display:inline-block;font-size:14px;
+}
+.week-strip-day.today .wsd-name{color:var(--red)}
+.week-strip-day.has-events .wsd-name{color:var(--label)}
+.week-strip-events{padding:0 0 4px}
+.wse-item{
+  display:flex;align-items:center;gap:8px;
+  padding:7px 14px;border-top:0.5px solid var(--separator);
+}
+.wse-bar{width:3px;height:28px;border-radius:2px;flex-shrink:0}
+.wse-body{flex:1;min-width:0}
+.wse-title{font-size:13px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wse-meta{font-size:11px;color:var(--label-secondary);margin-top:1px}
+.wse-day-hdr{padding:6px 14px 2px;font-size:11px;font-weight:600;color:var(--label-tertiary);text-transform:uppercase;letter-spacing:0.5px;border-top:0.5px solid var(--separator)}
+
+.dash-today-hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 8px}
+.dash-today-title{font-size:17px;font-weight:600}
+.dash-today-date{font-size:13px;color:var(--label-secondary)}
+
 .ai-hero{
   margin:16px;padding:20px;
   background:linear-gradient(135deg,#AF52DE,#FF2D55);color:#fff;
@@ -747,13 +808,11 @@ function renderCurrent(){
 
 function renderToday(){
   const today=new Date();
+  const h=today.getHours();
+  const greeting=h<12?'Guten Morgen':h<17?'Guten Tag':'Guten Abend';
   document.getElementById('today-weekday-lbl').textContent=DE_DAYS_FULL[today.getDay()]+', '+today.getDate()+'. '+DE_MONTHS[today.getMonth()];
-  const todayEvs=eventsOnDay(today);
-  const start=new Date(today);start.setDate(start.getDate()+1);start.setHours(0,0,0,0);
-  const end=new Date(today);end.setDate(end.getDate()+30);end.setHours(23,59,59,999);
-  const upcoming=eventsInRange(start,end).filter(e=>e.cat==='abgabe'||e.cat==='klausur'||e.cat==='pruefung').slice(0,8);
-  const upcomingEvs=eventsInRange(start,end).filter(e=>e.cat!=='abgabe'&&e.cat!=='klausur'&&e.cat!=='pruefung').slice(0,3);
   let html='';
+
   if(isStandalone()===false&&isIOS()&&!localStorage.getItem('uni_banner_dismissed')){
     html+=`<div class="install-banner">
       <div class="install-banner-body">
@@ -763,51 +822,129 @@ function renderToday(){
       <button onclick="dismissBanner(event)">OK</button>
     </div>`;
   }
-  if(!localStorage.getItem('uni_ai_tried')&&state.events.length<=7){
-    html+=`<div class="ai-hero" onclick="openAI()">
-      <div class="ai-hero-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.39 7.36H22l-6.19 4.5L18.2 21 12 16.5 5.8 21l2.39-7.14L2 9.36h7.61z"/></svg>
-      </div>
-      <div class="ai-hero-title">Semesterplan in Sekunden</div>
-      <div class="ai-hero-sub">Foto vom Vorlesungsplan oder Text aus Moodle/Mail einfügen – die KI erstellt alle Termine automatisch, auch bei unregelmäßigen Zeiten.</div>
-      <button class="ai-hero-btn">Jetzt ausprobieren</button>
-    </div>`;
-  }
-  if(todayEvs.length===0){
-    html+=`<div class="empty" style="margin:20px 0">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-      <div class="empty-title">Heute frei</div>
-      <div>Keine Termine für heute.</div>
-    </div>`;
-  }else{
-    html+='<div class="section-hdr">Heute</div>';
-    todayEvs.forEach(e=>{html+=eventCardHtml(e)});
-  }
-  if(upcoming.length){
-    html+='<div class="section-hdr" style="margin-top:8px">Anstehende Deadlines</div>';
-    upcoming.forEach(e=>{
-      const d=parseD(e.date);
-      const days=daysBetween(today,d);
-      const cls=days<=2?'':days<=7?'soon':'far';
-      const lbl=days===1?'morgen':days+' Tage';
-      const course=getCourse(e.courseId);
-      const cat=CATS[e.cat]||CATS.sonstiges;
-      html+=`<div class="deadline-card" onclick="openSheet('edit','${e.id.split('@')[0]}')">
-        <div class="deadline-dot" style="background:${cat.color}"></div>
-        <div class="deadline-body">
-          <div class="deadline-title">${esc(e.title)}</div>
-          <div class="deadline-meta">${d.getDate()}. ${DE_MONTHS_SHORT[d.getMonth()]}${course?' · '+esc(course.name):''}</div>
-        </div>
-        <div class="deadline-count ${cls}">${lbl}</div>
-      </div>`;
-    });
-  }
-  if(upcomingEvs.length){
-    html+='<div class="section-hdr" style="margin-top:8px">Nächste Termine</div>';
-    upcomingEvs.forEach(e=>{html+=eventCardHtml(e,true)});
-  }
+
+  html+=`<div class="dash-greeting">
+    <div class="dash-greeting-sub">${greeting}</div>
+  </div>`;
+
+  html+=renderSemesterBar(today);
+  html+=renderCountdowns(today);
+  html+=renderWeekStrip(today);
+  html+=renderTodaySection(today);
   html+='<div style="height:40px"></div>';
   document.getElementById('today-content').innerHTML=html;
+}
+
+function renderSemesterBar(today){
+  const semStart=new Date(2026,3,14);
+  const semEnd=new Date(2026,6,15);
+  const totalDays=daysBetween(semStart,semEnd);
+  const doneDays=Math.max(0,Math.min(totalDays,daysBetween(semStart,today)));
+  const pct=Math.round(doneDays/totalDays*100);
+  const weekNum=Math.max(1,Math.ceil(doneDays/7));
+  const weeksTotal=Math.ceil(totalDays/7);
+  const weeksLeft=Math.max(0,weeksTotal-weekNum+1);
+  return `<div class="semester-bar-wrap">
+    <div class="semester-bar-top">
+      <div class="semester-bar-label">Sommersemester 2026 · Woche ${weekNum} von ${weeksTotal}</div>
+      <div class="semester-bar-pct">${pct}%</div>
+    </div>
+    <div class="semester-bar-track"><div class="semester-bar-fill" style="width:${pct}%"></div></div>
+    <div class="semester-bar-weeks">
+      <div class="semester-bar-week">14. Apr</div>
+      <div class="semester-bar-week" style="color:var(--label-secondary);font-weight:500">${weeksLeft} Wo. noch</div>
+      <div class="semester-bar-week">15. Jul</div>
+    </div>
+  </div>`;
+}
+
+function renderCountdowns(today){
+  const end=new Date(today);end.setDate(end.getDate()+90);
+  const deadlines=eventsInRange(today,end)
+    .filter(e=>['abgabe','klausur','pruefung'].includes(e.cat))
+    .sort((a,b)=>a.date.localeCompare(b.date))
+    .slice(0,6);
+  if(!deadlines.length)return '';
+  let html='<div class="section-hdr">Nächste Deadlines & Klausuren</div><div class="countdown-row">';
+  deadlines.forEach(e=>{
+    const d=parseD(e.date);
+    const days=daysBetween(today,d);
+    const cls=days<=3?'urgent':days<=10?'soon':'ok';
+    const lbl=days===0?'Heute':days===1?'Morgen':days+' Tage';
+    const unit=days<=1?'':days===1?'':'verbleibend';
+    const course=getCourse(e.courseId);
+    const cat=CATS[e.cat]||CATS.sonstiges;
+    const dotColor=cls==='ok'?(course?course.color:cat.color):'transparent';
+    html+=`<div class="countdown-card ${cls}" onclick="switchView('month');selectDay('${e.date}')">
+      <div class="countdown-num">${days===0?'!':days===1?'1':days}</div>
+      <div class="countdown-unit">${days===0?'Heute!':days===1?'Morgen':days+' Tage'}</div>
+      <div class="countdown-title">${esc(e.title)}</div>
+      <div class="countdown-course">${e.timeStart?e.timeStart+' · ':''}${d.getDate()}. ${DE_MONTHS_SHORT[d.getMonth()]}${course?' · '+esc(course.short||course.name):''}</div>
+    </div>`;
+  });
+  html+='</div>';
+  return html;
+}
+
+function renderWeekStrip(today){
+  const ws=weekStart(today);
+  let stripHtml='<div class="week-strip-days">';
+  const dayNames=['Mo','Di','Mi','Do','Fr','Sa','So'];
+  const weekEvsByDay=[];
+  for(let i=0;i<7;i++){
+    const d=new Date(ws);d.setDate(d.getDate()+i);
+    const evs=eventsOnDay(d);
+    weekEvsByDay.push({d,evs});
+    const isT=sameDay(d,today);
+    const hasEvs=evs.length>0;
+    const dots=[...new Set(evs.map(e=>getCourse(e.courseId)?.color||CATS[e.cat]?.color||'#8E8E93'))].slice(0,3);
+    stripHtml+=`<div class="week-strip-day ${isT?'today':''} ${hasEvs?'has-events':''}">
+      <div class="wsd-name">${dayNames[i]}</div>
+      <div class="wsd-num">${d.getDate()}</div>
+      <div class="wsd-dots">${dots.map(c=>`<div class="wsd-dot" style="background:${c}"></div>`).join('')}</div>
+    </div>`;
+  }
+  stripHtml+='</div>';
+  let evListHtml='';
+  let lastDayLabel='';
+  weekEvsByDay.forEach(({d,evs})=>{
+    if(!evs.length)return;
+    const isT=sameDay(d,today);
+    const dayLabel=isT?'Heute':DE_DAYS_FULL[d.getDay()]+', '+d.getDate()+'.';
+    evListHtml+=`<div class="wse-day-hdr">${dayLabel}</div>`;
+    evs.forEach(e=>{
+      const course=getCourse(e.courseId);
+      const cat=CATS[e.cat]||CATS.sonstiges;
+      const color=course?course.color:cat.color;
+      const origId=e.id.split('@')[0];
+      evListHtml+=`<div class="wse-item" onclick="openSheet('edit','${origId}')">
+        <div class="wse-bar" style="background:${color}"></div>
+        <div class="wse-body">
+          <div class="wse-title">${esc(e.title)}</div>
+          <div class="wse-meta">${e.timeStart?e.timeStart+(e.timeEnd?'–'+e.timeEnd:''):'ganztägig'}${e.location?' · '+esc(e.location):''}${course?' · '+esc(course.short||course.name):''}</div>
+        </div>
+      </div>`;
+    });
+  });
+  if(!evListHtml){
+    evListHtml=`<div style="padding:12px 14px 14px;font-size:13px;color:var(--label-tertiary);border-top:0.5px solid var(--separator)">Diese Woche keine Termine</div>`;
+  }
+  return `<div class="week-strip">
+    <div class="week-strip-hdr">
+      <div class="week-strip-title">Diese Woche</div>
+      <button onclick="switchView('week')" style="font-size:13px;color:var(--blue)">Alle →</button>
+    </div>
+    ${stripHtml}
+    <div class="week-strip-events">${evListHtml}</div>
+  </div>`;
+}
+
+function renderTodaySection(today){
+  const todayEvs=eventsOnDay(today);
+  if(!todayEvs.length)return '';
+  let html='<div class="dash-today-hdr"><div class="dash-today-title">Heute im Detail</div></div>';
+  todayEvs.forEach(e=>{html+=eventCardHtml(e)});
+  return html;
 }
 
 function eventCardHtml(e,showDate){
