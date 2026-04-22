@@ -1221,7 +1221,7 @@ function closeSheet(){
 function renderEventForm(){
   const d=state.sheetData;
   const catGrid=Object.entries(CATS).map(([k,v])=>`
-    <button class="cat-chip ${d.cat===k?'sel':''}" style="color:${v.color}" onclick="setField('cat','${k}')">
+    <button type="button" class="cat-chip ${d.cat===k?'sel':''}" data-cat="${k}" style="color:${v.color}" onclick="selectCat('${k}')">
       <span class="cat-chip-dot" style="background:${v.color}"></span>
       <span style="color:var(--label);font-weight:500">${v.label}</span>
     </button>`).join('');
@@ -1328,6 +1328,12 @@ function renderSheetBody(){
   else body.innerHTML=renderEventForm();
 }
 function setField(k,v){state.sheetData[k]=v}
+function selectCat(k){
+  state.sheetData.cat=k;
+  document.querySelectorAll('.cat-chip').forEach(el=>{
+    el.classList.toggle('sel',el.dataset.cat===k);
+  });
+}
 
 function saveSheet(){
   const d=state.sheetData;
