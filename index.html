@@ -543,6 +543,125 @@ textarea.form-input{text-align:left;min-height:60px;resize:none;padding:10px 0;f
 .dialog-actions button.destructive{color:var(--red)}
 .dialog-actions button.bold{font-weight:600}
 
+/* ---------- Semester ---------- */
+.sem-chip{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:13px;font-weight:600;color:var(--blue);
+  background:var(--fill-tertiary);padding:5px 10px;border-radius:14px;
+}
+.sem-chip svg{width:12px;height:12px}
+.sem-chip:active{opacity:0.6}
+.semester-card{margin:0 16px 8px;background:var(--bg-elevated);border-radius:14px;padding:14px 16px;transition:transform 0.1s;display:block;width:calc(100% - 32px);text-align:left}
+.semester-card:active{transform:scale(0.98)}
+.semester-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.semester-card-name{font-size:12px;font-weight:600;color:var(--label-secondary);text-transform:uppercase;letter-spacing:0.2px}
+.semester-card-head{font-size:20px;font-weight:700;letter-spacing:-0.3px;margin-bottom:10px}
+.semester-card-head small{font-size:15px;font-weight:500;color:var(--label-secondary);letter-spacing:0}
+.semester-bar-track{position:relative}
+.semester-bar-break{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,var(--separator-strong) 0 2px,transparent 2px 4px);z-index:1}
+.semester-bar-now{position:absolute;top:-3px;bottom:-3px;width:2px;border-radius:1px;background:var(--label);z-index:2}
+.phase-pill{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;padding:3px 8px;border-radius:6px}
+.phase-lecture{background:rgba(0,122,255,0.12);color:var(--blue)}
+.phase-break{background:rgba(255,149,0,0.14);color:var(--orange)}
+.phase-free{background:rgba(52,199,89,0.14);color:var(--green)}
+.phase-hol{background:rgba(255,59,48,0.12);color:var(--red)}
+.phase-row{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 10px}
+
+.promo-card{
+  margin:0 16px 12px;padding:16px;border-radius:14px;color:#fff;
+  background:linear-gradient(135deg,#5856D6,#007AFF);
+  display:flex;flex-direction:column;gap:6px;
+}
+.promo-card.warm{background:linear-gradient(135deg,#FF9500,#FF2D55)}
+.promo-title{font-size:17px;font-weight:700;letter-spacing:-0.2px}
+.promo-sub{font-size:14px;opacity:0.92;line-height:1.4}
+.promo-actions{display:flex;gap:8px;margin-top:6px}
+.promo-actions button{background:#fff;color:#5856D6;padding:8px 14px;border-radius:10px;font-size:15px;font-weight:600}
+.promo-card.warm .promo-actions button{color:#FF2D55}
+.promo-card .promo-actions button.ghost{background:rgba(255,255,255,0.22);color:#fff}
+
+.now-card{
+  margin:0 16px 8px;border-radius:14px;padding:14px 16px;color:#fff;position:relative;overflow:hidden;
+  transition:transform 0.1s;
+}
+.now-card:active{transform:scale(0.98)}
+.now-label{font-size:12px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase;opacity:0.85;display:flex;align-items:center;gap:6px}
+.now-live{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.now-title{font-size:20px;font-weight:700;letter-spacing:-0.3px;margin-top:4px}
+.now-meta{font-size:14px;opacity:0.9;margin-top:2px}
+.now-track{height:4px;background:rgba(255,255,255,0.3);border-radius:2px;margin-top:10px;overflow:hidden}
+.now-fill{height:100%;background:#fff;border-radius:2px}
+.now-next{font-size:13px;opacity:0.85;margin-top:10px;padding-top:10px;border-top:0.5px solid rgba(255,255,255,0.3)}
+
+.sem-row-check{width:22px;height:22px;flex-shrink:0;color:var(--blue);display:flex;align-items:center;justify-content:center}
+.sem-row-check svg{width:18px;height:18px}
+.sem-edit{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--blue);background:var(--fill-tertiary);flex-shrink:0}
+.sem-edit svg{width:16px;height:16px}
+.sem-edit:active{opacity:0.6}
+
+.stepper{display:flex;align-items:center;gap:0;background:var(--fill-tertiary);border-radius:8px;overflow:hidden}
+.stepper button{width:36px;height:30px;font-size:20px;color:var(--blue);display:flex;align-items:center;justify-content:center}
+.stepper button:active{background:var(--fill-secondary)}
+.stepper span{min-width:48px;text-align:center;font-weight:600;font-variant-numeric:tabular-nums}
+
+.break-card{background:var(--bg-elevated);border-radius:12px;margin:0 16px 8px;overflow:hidden}
+.break-remove{color:var(--red);font-size:15px}
+.add-link{display:block;margin:4px 16px 0;padding:12px;border-radius:12px;background:var(--bg-elevated);color:var(--blue);font-size:17px;text-align:center;width:calc(100% - 32px)}
+.add-link:active{background:var(--fill-tertiary)}
+.form-hint{padding:8px 16px 0;font-size:12px;color:var(--label-tertiary);line-height:1.45}
+.form-hint b{color:var(--label-secondary);font-weight:600}
+.quick-chip{font-size:13px;color:var(--blue);background:rgba(0,122,255,0.1);padding:4px 10px;border-radius:12px;font-weight:500}
+.quick-chip:active{opacity:0.6}
+
+.switch{position:relative;width:51px;height:31px;flex-shrink:0;display:inline-block}
+.switch input{opacity:0;width:0;height:0;position:absolute}
+.switch span{position:absolute;inset:0;background:var(--fill-secondary);border-radius:16px;transition:background 0.2s}
+.switch span::after{content:"";position:absolute;top:2px;left:2px;width:27px;height:27px;border-radius:50%;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,0.2);transition:transform 0.2s}
+.switch input:checked+span{background:var(--green)}
+.switch input:checked+span::after{transform:translateX(20px)}
+
+.occ-banner{margin:0 16px 16px;padding:10px 14px;border-radius:10px;background:var(--fill-tertiary);font-size:13px;color:var(--label-secondary);line-height:1.4}
+.occ-banner b{color:var(--label);font-weight:600}
+
+.dialog-actions.stack{flex-direction:column}
+.dialog-actions.stack button+button{border-left:none;border-top:0.5px solid var(--separator)}
+
+.cal-day.hol .cal-num{color:var(--red)}
+.cal-day.brk{background:var(--fill-quaternary)}
+.cal-day.selected{background:var(--fill-tertiary)}
+.cal-day.lec-start::after,.cal-day.lec-end::after{
+  content:"";position:absolute;top:4px;right:6px;width:5px;height:5px;border-radius:50%;background:var(--blue);
+}
+
+/* Woche v2 */
+.week-allday{display:grid;grid-template-columns:44px repeat(7,1fr);border-bottom:0.5px solid var(--separator);padding:4px 0}
+.week-allday-lbl{font-size:9px;color:var(--label-tertiary);text-align:right;padding:4px 6px 0;text-transform:uppercase}
+.week-allday-cell{display:flex;flex-direction:column;gap:2px;padding:0 1px;min-width:0}
+.week-allday-item{font-size:9.5px;font-weight:600;color:#fff;border-radius:4px;padding:2px 4px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.week-allday-item.hol{background:rgba(255,59,48,0.14);color:var(--red)}
+.week-allday-item.brk{background:rgba(255,149,0,0.16);color:var(--orange)}
+.week-body{display:grid;grid-template-columns:44px repeat(7,1fr);position:relative}
+.week-hours .week-hour-label{height:40px;margin-top:0;transform:translateY(-5px)}
+.semester-card-head small.sub{display:block;margin-top:2px}
+.week-col{
+  position:relative;border-left:0.5px solid var(--separator);
+  background-image:repeating-linear-gradient(to bottom,var(--separator) 0,var(--separator) 1px,transparent 1px,transparent 40px);
+}
+.week-col.today{background-color:rgba(0,122,255,0.05)}
+.week-col.off{background-color:var(--fill-quaternary)}
+.week-event{min-height:18px;cursor:pointer}
+.week-event small{display:block;font-size:9px;opacity:0.85;font-weight:400;margin-top:1px}
+.week-now{position:absolute;left:0;right:0;height:2px;background:var(--red);z-index:5;pointer-events:none}
+.week-now::before{content:"";position:absolute;left:-4px;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--red)}
+.week-day-hdr.hol .week-day-name{color:var(--red)}
+.week-range-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 12px 8px;flex-wrap:wrap}
+
+.course-summary{display:flex;gap:8px;padding:0 16px 12px}
+.course-stat{flex:1;background:var(--bg-elevated);border-radius:12px;padding:10px 12px}
+.course-stat-num{font-size:22px;font-weight:700;letter-spacing:-0.4px}
+.course-stat-lbl{font-size:12px;color:var(--label-secondary);margin-top:1px}
+
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 </head>
@@ -618,15 +737,22 @@ textarea.form-input{text-align:left;min-height:60px;resize:none;padding:10px 0;f
     </div>
   </div>
   <div style="padding:0 4px 20px">
-    <div style="font-size:15px;color:var(--label-secondary);font-weight:500;padding:0 12px 8px" id="week-range"></div>
+    <div class="week-range-row">
+      <div style="font-size:15px;color:var(--label-secondary);font-weight:500" id="week-range"></div>
+      <div id="week-phase"></div>
+    </div>
     <div class="week-head" id="week-head"></div>
-    <div class="week-grid" id="week-grid"></div>
+    <div id="week-allday"></div>
+    <div class="week-body" id="week-grid"></div>
   </div>
 </div>
 
 <div class="view" id="view-courses">
   <div class="nav-bar">
-    <div class="nav-title">Kurse</div>
+    <div>
+      <div id="courses-sem-chip" style="margin-bottom:4px"></div>
+      <div class="nav-title">Kurse</div>
+    </div>
     <div class="nav-actions">
       <button class="nav-btn" onclick="openSheet('course')" aria-label="Neuer Kurs">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
@@ -701,41 +827,83 @@ const DE_MONTHS_SHORT=['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','O
 const DE_DAYS_FULL=['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
 const DE_DAYS_SHORT=['So','Mo','Di','Mi','Do','Fr','Sa'];
 
+const RECURRING_CATS=['vorlesung','uebung','tutorium','lerngruppe'];
+
 let state={
   view:'today',
   events:[],
   courses:[],
+  semesters:[],
+  activeSemesterId:null,
   cursor:new Date(),
   selectedDate:null,
   weekCursor:new Date(),
   sheetMode:null,
   sheetData:{},
   editId:null,
+  editOcc:null,
 };
 
 function loadState(){
+  let hadData=false;
   try{
     const raw=localStorage.getItem('uni_cal_v3');
     if(raw){
       const d=JSON.parse(raw);
       state.events=d.events||[];
       state.courses=d.courses||[];
+      state.semesters=d.semesters||[];
+      state.activeSemesterId=d.activeSemesterId||null;
+      hadData=true;
     }
   }catch(e){}
-  if(!state.events.length&&!state.courses.length){seedDemo()}
+  if(!hadData||(!state.events.length&&!state.courses.length&&!state.semesters.length)){seedDemo()}
+  migrateState();
+  autoSelectSemester();
+  saveState();
 }
 function saveState(){
-  try{localStorage.setItem('uni_cal_v3',JSON.stringify({events:state.events,courses:state.courses}))}catch(e){}
+  invalidateCaches();
+  try{localStorage.setItem('uni_cal_v3',JSON.stringify({version:4,events:state.events,courses:state.courses,semesters:state.semesters,activeSemesterId:state.activeSemesterId}))}catch(e){}
+}
+// Alte Daten (v1–v3) kannten keine Semester: alles war fest auf das SoSe 2026 verdrahtet.
+function migrateState(){
+  if(!state.semesters.length&&state.courses.length){
+    const ss={id:sid(),...suggestSemester('SS',2026),lectureStart:'2026-04-14',lectureEnd:'2026-07-15'};
+    state.semesters.push(ss);
+    state.courses.forEach(c=>{if(!c.semesterId)c.semesterId=ss.id});
+  }
+  state.semesters.forEach(s=>{if(!Array.isArray(s.breaks))s.breaks=[];s.breaks.forEach(b=>{if(!b.id)b.id=bid()})});
+  const fallback=state.semesters[0]?.id||null;
+  state.courses.forEach(c=>{if(!c.semesterId||!getSemester(c.semesterId)){const s=semesterAt(new Date())||getSemester(fallback);c.semesterId=s?s.id:null}});
+  state.events.forEach(e=>{
+    if(!Array.isArray(e.exdates))e.exdates=[];
+    if(e.skipBreaks===undefined)e.skipBreaks=e.repeat&&e.repeat!=='none'&&RECURRING_CATS.includes(e.cat);
+  });
+}
+// Aktives Semester nur automatisch wechseln, wenn das gewählte vorbei ist oder fehlt –
+// so bleibt eine bewusste Auswahl (z.B. schon das nächste Semester planen) erhalten.
+function autoSelectSemester(){
+  const today=fmtD(new Date());
+  const cur=activeSemester();
+  if(cur&&cur.end>=today)return;
+  const now=semesterAt(today);
+  if(now){state.activeSemesterId=now.id;return}
+  const upcoming=[...state.semesters].filter(s=>s.start>today).sort((a,b)=>a.start.localeCompare(b.start))[0];
+  state.activeSemesterId=(upcoming||sortedSemesters()[0]||{}).id||null;
 }
 function seedDemo(){
-  const c1={id:cid(),name:'Analysis II',short:'AN',color:'#007AFF',lecturer:'Prof. Müller'};
-  const c2={id:cid(),name:'Lineare Algebra',short:'LA',color:'#5856D6',lecturer:'Prof. Schmidt'};
-  const c3={id:cid(),name:'Programmierung',short:'PG',color:'#34C759',lecturer:'Prof. Weber'};
+  const sem=createSemesterFromKey(semesterKeyFor(new Date()));
+  state.activeSemesterId=sem.id;
+  const c1={id:cid(),semesterId:sem.id,name:'Analysis II',short:'AN',color:'#007AFF',lecturer:'Prof. Müller',ects:9};
+  const c2={id:cid(),semesterId:sem.id,name:'Lineare Algebra',short:'LA',color:'#5856D6',lecturer:'Prof. Schmidt',ects:9};
+  const c3={id:cid(),semesterId:sem.id,name:'Programmierung',short:'PG',color:'#34C759',lecturer:'Prof. Weber',ects:6};
   state.courses=[c1,c2,c3];
   const t=new Date();
   const mk=(offset,hh,mm,dur,title,cat,courseId,loc,rep)=>{
     const d=new Date(t);d.setDate(d.getDate()+offset);
-    return{id:eid(),title,cat,courseId,date:fmtD(d),timeStart:pad(hh)+':'+pad(mm),timeEnd:pad(hh+Math.floor(dur/60))+':'+pad((mm+dur)%60),location:loc,note:'',repeat:rep||'none',repeatUntil:''};
+    const endMin=hh*60+mm+dur;
+    return{id:eid(),title,cat,courseId,date:fmtD(d),timeStart:pad(hh)+':'+pad(mm),timeEnd:dur>1?pad(Math.floor(endMin/60)%24)+':'+pad(endMin%60):'',location:loc,note:'',repeat:rep||'none',repeatUntil:rep?sem.lectureEnd:'',skipBreaks:!!rep,exdates:[]};
   };
   state.events=[
     mk(0,10,0,90,'Analysis II Vorlesung','vorlesung',c1.id,'H1','weekly'),
@@ -746,10 +914,11 @@ function seedDemo(){
     mk(14,9,0,120,'Klausur Programmierung','klausur',c3.id,'Sporthalle'),
     mk(21,23,59,1,'Abgabe Abschlussprojekt','abgabe',c1.id,'Moodle'),
   ];
-  saveState();
 }
 function eid(){return 'e_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
 function cid(){return 'c_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+function sid(){return 's_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+function bid(){return 'b_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
 function pad(n){return String(n).padStart(2,'0')}
 function fmtD(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
 function parseD(s){const[y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d)}
@@ -759,27 +928,158 @@ function isWeekend(d){const g=d.getDay();return g===0||g===6}
 function weekStart(d){const c=new Date(d);const g=(c.getDay()+6)%7;c.setDate(c.getDate()-g);c.setHours(0,0,0,0);return c}
 function startOfMonth(d){return new Date(d.getFullYear(),d.getMonth(),1)}
 
-function expandEvent(ev,rangeStart,rangeEnd){
+function addDays(d,n){const c=new Date(d);c.setDate(c.getDate()+n);return c}
+function nextWeekday(d,wd){const c=new Date(d);while(c.getDay()!==wd)c.setDate(c.getDate()+1);return c}
+function prevWeekday(d,wd){const c=new Date(d);while(c.getDay()!==wd)c.setDate(c.getDate()-1);return c}
+function fmtShort(ds){const d=parseD(ds);return d.getDate()+'. '+DE_MONTHS_SHORT[d.getMonth()]}
+function fmtLong(ds){const d=parseD(ds);return DE_DAYS_SHORT[d.getDay()]+', '+d.getDate()+'. '+DE_MONTHS[d.getMonth()]+' '+d.getFullYear()}
+function inDays(n){return n===0?'heute':n===1?'morgen':'in '+n+' Tagen'}
+
+/* ---------- Feiertage (bundesweit) ---------- */
+function easterSunday(y){
+  const a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3);
+  const h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451);
+  const n=h+l-7*m+114;
+  return new Date(y,Math.floor(n/31)-1,(n%31)+1);
+}
+const _holidayCache={};
+function holidaysOf(y){
+  if(_holidayCache[y])return _holidayCache[y];
+  const e=easterSunday(y);
+  const off=n=>fmtD(addDays(e,n));
+  return _holidayCache[y]={
+    [y+'-01-01']:'Neujahr',
+    [off(-2)]:'Karfreitag',
+    [off(1)]:'Ostermontag',
+    [y+'-05-01']:'Tag der Arbeit',
+    [off(39)]:'Christi Himmelfahrt',
+    [off(50)]:'Pfingstmontag',
+    [y+'-10-03']:'Tag der Deutschen Einheit',
+    [y+'-12-25']:'1. Weihnachtstag',
+    [y+'-12-26']:'2. Weihnachtstag',
+  };
+}
+function holidayName(ds){return holidaysOf(+ds.slice(0,4))[ds]||''}
+
+/* ---------- Semester ---------- */
+// Deutsche Unis: WiSe 1.10.–31.3., SoSe 1.4.–30.9. Die Vorlesungszeiten sind Vorschläge
+// und lassen sich pro Semester frei anpassen (Hochschulen, Trimester etc.).
+function semesterKeyFor(d){const m=d.getMonth(),y=d.getFullYear();if(m>=3&&m<=8)return{type:'SS',year:y};return{type:'WS',year:m>=9?y:y-1}}
+function nextSemesterKey(k){return k.type==='SS'?{type:'WS',year:k.year}:{type:'SS',year:k.year+1}}
+function semesterName(type,year){return type==='WS'?'Wintersemester '+year+'/'+pad((year+1)%100):'Sommersemester '+year}
+function semShort(s){
+  if(!s)return '';
+  if(s.type==='WS'&&s.name===semesterName('WS',s.year))return 'WiSe '+pad(s.year%100)+'/'+pad((s.year+1)%100);
+  if(s.type==='SS'&&s.name===semesterName('SS',s.year))return 'SoSe '+s.year;
+  return s.name;
+}
+function suggestSemester(type,year){
+  if(type==='WS'){
+    return{type,year,name:semesterName(type,year),
+      start:fmtD(new Date(year,9,1)),end:fmtD(new Date(year+1,2,31)),
+      lectureStart:fmtD(nextWeekday(new Date(year,9,12),1)),
+      lectureEnd:fmtD(prevWeekday(new Date(year+1,1,14),5)),
+      breaks:[{id:bid(),name:'Weihnachtspause',start:fmtD(weekStart(new Date(year,11,23))),end:fmtD(new Date(year+1,0,6))}]};
+  }
+  return{type,year,name:semesterName(type,year),
+    start:fmtD(new Date(year,3,1)),end:fmtD(new Date(year,8,30)),
+    lectureStart:fmtD(nextWeekday(new Date(year,3,12),1)),
+    lectureEnd:fmtD(prevWeekday(new Date(year,6,19),5)),
+    breaks:[]};
+}
+function getSemester(id){return state.semesters.find(s=>s.id===id)}
+function activeSemester(){return getSemester(state.activeSemesterId)||null}
+function semesterAt(date){const ds=typeof date==='string'?date:fmtD(date);return state.semesters.find(s=>ds>=s.start&&ds<=s.end)||null}
+function sortedSemesters(){return [...state.semesters].sort((a,b)=>b.start.localeCompare(a.start))}
+function findSemesterByKey(k){return state.semesters.find(s=>s.type===k.type&&s.year===k.year)}
+function createSemesterFromKey(k){const s={id:sid(),...suggestSemester(k.type,k.year)};state.semesters.push(s);return s}
+function semesterCourses(s){return s?state.courses.filter(c=>c.semesterId===s.id):[]}
+function semesterOfEvent(e){const c=getCourse(e.courseId);return (c&&getSemester(c.semesterId))||semesterAt(e.date)}
+
+let _breakIdx=null,_weeksCache={};
+function invalidateCaches(){_breakIdx=null;_weeksCache={}}
+function breakAt(ds){
+  if(!_breakIdx){_breakIdx=[];state.semesters.forEach(s=>(s.breaks||[]).forEach(b=>{if(b.start&&b.end)_breakIdx.push(b)}))}
+  return _breakIdx.find(b=>ds>=b.start&&ds<=b.end)||null;
+}
+function dayInfo(ds){
+  const sem=semesterAt(ds),hol=holidayName(ds),br=breakAt(ds);
+  let phase=null;
+  if(sem)phase=br?'break':(ds>=sem.lectureStart&&ds<=sem.lectureEnd?'lecture':'free');
+  return{sem,hol,br,phase};
+}
+// Vorlesungswochen = Kalenderwochen der Vorlesungszeit, in denen mindestens ein Werktag nicht in einer Pause liegt.
+function lectureWeeks(sem){
+  if(_weeksCache[sem.id])return _weeksCache[sem.id];
+  const out=[];
+  let m=weekStart(parseD(sem.lectureStart));
+  const end=parseD(sem.lectureEnd);
+  let guard=0;
+  while(m<=end&&guard++<80){
+    for(let i=0;i<5;i++){
+      const ds=fmtD(addDays(m,i));
+      if(ds>=sem.lectureStart&&ds<=sem.lectureEnd&&!breakAt(ds)){out.push(fmtD(m));break}
+    }
+    m=addDays(m,7);
+  }
+  return _weeksCache[sem.id]=out;
+}
+function lectureWeekNum(sem,date){return lectureWeeks(sem).indexOf(fmtD(weekStart(date)))+1}
+function semesterStatus(sem,today){
+  const ds=fmtD(today);
+  const weeks=lectureWeeks(sem);
+  const ls=parseD(sem.lectureStart),le=parseD(sem.lectureEnd);
+  const total=Math.max(1,daysBetween(ls,le));
+  const info={weeksTotal:weeks.length,pct:Math.max(0,Math.min(100,Math.round(daysBetween(ls,today)/total*100)))};
+  info.weeksLeft=weeks.filter(w=>w>fmtD(weekStart(today))).length;
+  if(ds<sem.start){info.phase='upcoming';info.days=daysBetween(today,ls)}
+  else if(ds<sem.lectureStart){info.phase='before';info.days=daysBetween(today,ls)}
+  else if(ds>sem.end){info.phase='past'}
+  else if(ds>sem.lectureEnd){info.phase='after';info.days=daysBetween(today,parseD(sem.end))}
+  else{
+    info.br=breakAt(ds);
+    info.phase=info.br?'break':'lecture';
+    info.week=lectureWeekNum(sem,today);
+    if(info.br)info.days=daysBetween(today,parseD(info.br.end));
+  }
+  return info;
+}
+
+function catOf(e){return CATS[e.cat]||CATS.sonstiges}
+function colorOf(e){const c=getCourse(e.courseId);return c?c.color:catOf(e).color}
+function isSeries(e){return e&&e.repeat&&e.repeat!=='none'}
+function skipsOn(ev,ds){
+  if(ev.exdates&&ev.exdates.includes(ds))return true;
+  return !!(ev.skipBreaks&&(breakAt(ds)||holidayName(ds)));
+}
+
+function expandEvent(ev,rangeStart,rangeEnd,includeSkipped){
   const base=parseD(ev.date);
   const results=[];
-  if(ev.repeat==='none'||!ev.repeat){
-    if(base>=rangeStart&&base<=rangeEnd)results.push({...ev,date:ev.date});
+  if(!isSeries(ev)){
+    if(base>=rangeStart&&base<=rangeEnd)results.push({...ev});
     return results;
   }
   const until=ev.repeatUntil?parseD(ev.repeatUntil):new Date(rangeEnd.getFullYear()+1,rangeEnd.getMonth(),rangeEnd.getDate());
-  let d=new Date(base);
+  const push=d=>{
+    const ds=fmtD(d);
+    const skipped=skipsOn(ev,ds);
+    if(!skipped||includeSkipped)results.push({...ev,date:ds,_expanded:true,_skipped:skipped});
+  };
   const step=ev.repeat==='daily'?1:ev.repeat==='weekly'?7:ev.repeat==='biweekly'?14:0;
   if(step>0){
-    let guard=0;
-    while(d<=rangeEnd&&d<=until&&guard++<500){
-      if(d>=rangeStart)results.push({...ev,date:fmtD(d),_expanded:true});
-      d=new Date(d);d.setDate(d.getDate()+step);
+    // direkt an den Anfang des Bereichs springen statt ab Serienstart zu iterieren
+    const n=Math.max(0,Math.floor(daysBetween(base,rangeStart)/step));
+    let d=addDays(base,n*step),guard=0;
+    while(d<=rangeEnd&&d<=until&&guard++<1000){
+      if(d>=rangeStart)push(d);
+      d=addDays(d,step);
     }
   }else if(ev.repeat==='monthly'){
-    let guard=0;
-    while(d<=rangeEnd&&d<=until&&guard++<120){
-      if(d>=rangeStart)results.push({...ev,date:fmtD(d),_expanded:true});
-      d=new Date(d);d.setMonth(d.getMonth()+1);
+    let i=0,d=new Date(base);
+    while(d<=rangeEnd&&d<=until&&i<600){
+      if(d>=rangeStart&&d.getDate()===base.getDate())push(d);
+      i++;d=new Date(base.getFullYear(),base.getMonth()+i,base.getDate());
     }
   }
   return results;
@@ -831,10 +1131,15 @@ function renderToday(){
     </div>`;
   }
 
-  html+=`<div class="dash-greeting">
-    <div class="dash-greeting-sub">${greeting}</div>
+  const info=dayInfo(fmtD(today));
+  const pills=[];
+  if(info.hol)pills.push(`<span class="phase-pill phase-hol">${esc(info.hol)}</span>`);
+  html+=`<div class="dash-greeting" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+    <div class="dash-greeting-sub">${greeting}</div>${pills.join('')}
   </div>`;
 
+  html+=renderSemesterPromo(today);
+  html+=`<div id="now-slot">${renderNowCard()}</div>`;
   html+=renderSemesterBar(today);
   html+=renderCountdowns(today);
   html+=renderWeekStrip(today);
@@ -843,27 +1148,115 @@ function renderToday(){
   document.getElementById('today-content').innerHTML=html;
 }
 
-function renderSemesterBar(today){
-  const semStart=new Date(2026,3,14);
-  const semEnd=new Date(2026,6,15);
-  const totalDays=daysBetween(semStart,semEnd);
-  const doneDays=Math.max(0,Math.min(totalDays,daysBetween(semStart,today)));
-  const pct=Math.round(doneDays/totalDays*100);
-  const weekNum=Math.max(1,Math.ceil(doneDays/7));
-  const weeksTotal=Math.ceil(totalDays/7);
-  const weeksLeft=Math.max(0,weeksTotal-weekNum+1);
-  return `<div class="semester-bar-wrap">
-    <div class="semester-bar-top">
-      <div class="semester-bar-label">Sommersemester 2026 · Woche ${weekNum} von ${weeksTotal}</div>
-      <div class="semester-bar-pct">${pct}%</div>
-    </div>
-    <div class="semester-bar-track"><div class="semester-bar-fill" style="width:${pct}%"></div></div>
-    <div class="semester-bar-weeks">
-      <div class="semester-bar-week">14. Apr</div>
-      <div class="semester-bar-week" style="color:var(--label-secondary);font-weight:500">${weeksLeft} Wo. noch</div>
-      <div class="semester-bar-week">15. Jul</div>
+// Hinweis, wenn das nächste Semester bald beginnt, aber noch nicht angelegt ist.
+function renderSemesterPromo(today){
+  if(!state.semesters.length){
+    const k=semesterKeyFor(today);
+    return `<div class="promo-card">
+      <div class="promo-title">Semester einrichten</div>
+      <div class="promo-sub">Lege dein ${semesterName(k.type,k.year)} an – Vorlesungszeit, Pausen und Feiertage werden automatisch vorgeschlagen.</div>
+      <div class="promo-actions"><button onclick="openSemesterForm(null,'${k.type}',${k.year})">Jetzt anlegen</button></div>
+    </div>`;
+  }
+  const cur=semesterAt(today)||activeSemester();
+  const baseKey=cur?{type:cur.type,year:cur.year}:semesterKeyFor(today);
+  const nk=nextSemesterKey(baseKey);
+  if(findSemesterByKey(nk))return '';
+  const sug=suggestSemester(nk.type,nk.year);
+  const days=daysBetween(today,parseD(sug.start));
+  if(days>45||days<-30)return '';
+  const dismissKey='uni_promo_'+nk.type+nk.year;
+  if(safeGet(dismissKey))return '';
+  return `<div class="promo-card warm">
+    <div class="promo-title">${semesterName(nk.type,nk.year)} ${days>0?'startet '+inDays(days):'hat begonnen'}</div>
+    <div class="promo-sub">Leg es jetzt an und übernimm auf Wunsch deine Kurse – Vorlesungszeit und Pausen sind schon vorausgefüllt.</div>
+    <div class="promo-actions">
+      <button onclick="openSemesterForm(null,'${nk.type}',${nk.year})">Semester anlegen</button>
+      <button class="ghost" onclick="safeSet('${dismissKey}','1');renderToday()">Später</button>
     </div>
   </div>`;
+}
+
+function renderSemesterBar(today){
+  const sem=activeSemester();
+  if(!sem)return '';
+  const st=semesterStatus(sem,today);
+  const ls=parseD(sem.lectureStart),le=parseD(sem.lectureEnd);
+  const total=Math.max(1,daysBetween(ls,le));
+  const pos=ds=>Math.max(0,Math.min(100,daysBetween(ls,parseD(ds))/total*100));
+  const breaks=(sem.breaks||[]).filter(b=>b.start&&b.end&&b.end>=sem.lectureStart&&b.start<=sem.lectureEnd)
+    .map(b=>{const l=pos(b.start),r=pos(b.end);return `<div class="semester-bar-break" style="left:${l}%;width:${Math.max(1,r-l)}%" title="${esc(b.name)}"></div>`}).join('');
+  let head='',right='',mid='';
+  if(st.phase==='lecture'){
+    head=`Woche ${st.week} <small>von ${st.weeksTotal}</small>`;
+    right=st.pct+'%';
+    mid=st.weeksLeft===0?'Letzte Woche!':st.weeksLeft+' Wo. noch';
+  }else if(st.phase==='break'){
+    head=`${esc(st.br.name)} <small class="sub">${st.days===0?'Letzter Tag der Pause':'Noch '+(st.days+1)+' Tage frei'}</small>`;
+    right=st.pct+'%';
+    mid=st.weeksLeft+' Wo. danach';
+  }else if(st.phase==='before'||st.phase==='upcoming'){
+    head=st.days===0?'Vorlesungsstart heute':`Vorlesungsstart <small>${inDays(st.days)}</small>`;
+    right='';
+    mid=st.weeksTotal+' Vorlesungswochen';
+  }else if(st.phase==='after'){
+    head=`Vorlesungsfreie Zeit <small class="sub">Semesterende ${inDays(st.days)}</small>`;
+    right='✓';
+    mid='Vorlesungen geschafft';
+  }else{
+    head='Abgeschlossen';right='✓';mid='';
+  }
+  const inLecture=st.phase==='lecture'||st.phase==='break';
+  const fill=st.phase==='after'||st.phase==='past'?100:st.phase==='before'||st.phase==='upcoming'?0:st.pct;
+  return `<button class="semester-card" onclick="openSheet('semesters')">
+    <div class="semester-card-top">
+      <div class="semester-card-name">${esc(sem.name)}</div>
+      <div style="display:flex;align-items:center;gap:6px">
+        <span class="semester-bar-pct">${right}</span>
+        <svg class="chevron" viewBox="0 0 12 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 2 10 9 2 16"/></svg>
+      </div>
+    </div>
+    <div class="semester-card-head">${head}</div>
+    <div class="semester-bar-track">
+      ${breaks}
+      <div class="semester-bar-fill" style="width:${fill}%;${st.phase==='after'||st.phase==='past'?'background:var(--green)':''}"></div>
+      ${inLecture?`<div class="semester-bar-now" style="left:calc(${st.pct}% - 1px)"></div>`:''}
+    </div>
+    <div class="semester-bar-weeks">
+      <div class="semester-bar-week">${fmtShort(sem.lectureStart)}</div>
+      <div class="semester-bar-week" style="color:var(--label-secondary);font-weight:500">${mid}</div>
+      <div class="semester-bar-week">${fmtShort(sem.lectureEnd)}</div>
+    </div>
+  </button>`;
+}
+
+function toMin(t){const[h,m]=String(t).split(':').map(Number);return h*60+(m||0)}
+function fmtDur(min){if(min<60)return min+' Min';const h=Math.floor(min/60),m=min%60;return h+' Std'+(m?' '+m+' Min':'')}
+function renderNowCard(){
+  const now=new Date();
+  const nowMin=now.getHours()*60+now.getMinutes();
+  const evs=eventsOnDay(now).filter(e=>e.timeStart);
+  const cur=evs.find(e=>e.timeEnd&&nowMin>=toMin(e.timeStart)&&nowMin<toMin(e.timeEnd));
+  const next=evs.find(e=>toMin(e.timeStart)>nowMin&&e!==cur);
+  if(!cur&&!next)return '';
+  const card=(e,label,meta,progress,extra)=>{
+    const c=colorOf(e);
+    return `<div class="now-card" style="background:linear-gradient(135deg,${c},${hexA(c,0.72)})" onclick="openSheet('edit','${e.id}',null,'${e.date}')">
+      <div class="now-label">${cur===e?'<span class="now-live"></span>':''}${label}</div>
+      <div class="now-title">${esc(e.title)}</div>
+      <div class="now-meta">${meta}</div>
+      ${progress!=null?`<div class="now-track"><div class="now-fill" style="width:${progress}%"></div></div>`:''}
+      ${extra||''}
+    </div>`;
+  };
+  if(cur){
+    const s=toMin(cur.timeStart),en=toMin(cur.timeEnd);
+    const pct=Math.round((nowMin-s)/Math.max(1,en-s)*100);
+    const extra=next?`<div class="now-next">Danach: <b>${esc(next.title)}</b> um ${next.timeStart}${next.location?' · '+esc(next.location):''}</div>`:'';
+    return card(cur,'Jetzt',`noch ${fmtDur(en-nowMin)}${cur.location?' · '+esc(cur.location):''}`,pct,extra);
+  }
+  const diff=toMin(next.timeStart)-nowMin;
+  return card(next,'Als Nächstes · in '+fmtDur(diff),`${next.timeStart}${next.timeEnd?'–'+next.timeEnd:''}${next.location?' · '+esc(next.location):''}`,null);
 }
 
 function renderCountdowns(today){
@@ -881,7 +1274,7 @@ function renderCountdowns(today){
     const cls=days<=3?'urgent':days<=10?'soon':'ok';
     const course=getCourse(e.courseId);
     const cat=CATS[e.cat]||CATS.sonstiges;
-    html+=`<div class="countdown-card ${cls}" onclick="switchView('month');selectDay('${e.date}')">
+    html+=`<div class="countdown-card ${cls}" onclick="switchView('month');selectDay('${e.date}')" title="${esc(e.title)}">
       <div class="countdown-num">${days===0?'!':days}</div>
       <div class="countdown-unit">${days===0?'Heute!':days===1?'Morgen':days+' Tage'}</div>
       <div class="countdown-title">${esc(e.title)}</div>
@@ -903,7 +1296,7 @@ function renderWeekStrip(today){
     weekEvsByDay.push({d,evs});
     const isT=sameDay(d,today);
     const hasEvs=evs.length>0;
-    const dots=[...new Set(evs.map(e=>getCourse(e.courseId)?.color||CATS[e.cat]?.color||'#8E8E93'))].slice(0,3);
+    const dots=[...new Set(evs.map(colorOf))].slice(0,3);
     stripHtml+=`<div class="week-strip-day ${isT?'today':''} ${hasEvs?'has-events':''}">
       <div class="wsd-name">${dayNames[i]}</div>
       <div class="wsd-num">${d.getDate()}</div>
@@ -916,14 +1309,15 @@ function renderWeekStrip(today){
   weekEvsByDay.forEach(({d,evs})=>{
     if(!evs.length)return;
     const isT=sameDay(d,today);
-    const dayLabel=isT?'Heute':DE_DAYS_FULL[d.getDay()]+', '+d.getDate()+'.';
+    const hol=holidayName(fmtD(d));
+    const dayLabel=(isT?'Heute':DE_DAYS_FULL[d.getDay()]+', '+d.getDate()+'.')+(hol?' · '+esc(hol):'');
     evListHtml+=`<div class="wse-day-hdr">${dayLabel}</div>`;
     evs.forEach(e=>{
       const course=getCourse(e.courseId);
       const cat=CATS[e.cat]||CATS.sonstiges;
       const color=course?course.color:cat.color;
       const origId=e.id.split('@')[0];
-      evListHtml+=`<div class="wse-item" onclick="openSheet('edit','${origId}')">
+      evListHtml+=`<div class="wse-item" onclick="openSheet('edit','${origId}',null,'${e.date}')">
         <div class="wse-bar" style="background:${color}"></div>
         <div class="wse-body">
           <div class="wse-title">${esc(e.title)}</div>
@@ -961,7 +1355,7 @@ function eventCardHtml(e,showDate){
   const dateStr=showDate?(DE_DAYS_SHORT[d.getDay()]+' '+d.getDate()+'. '+DE_MONTHS_SHORT[d.getMonth()]+' · '):'';
   const timeHtml=e.timeStart?`<div class="event-time"><div class="event-time-start">${e.timeStart}</div>${e.timeEnd&&e.timeEnd!==e.timeStart?'<div class="event-time-end">'+e.timeEnd+'</div>':''}</div>`:`<div class="event-time"><div class="event-time-start">—</div></div>`;
   const origId=e.id.split('@')[0];
-  return `<div class="event-card" onclick="openSheet('edit','${origId}')">
+  return `<div class="event-card" onclick="openSheet('edit','${origId}',null,'${e.date}')">
     <div class="event-bar" style="background:${color}"></div>
     ${timeHtml}
     <div class="event-body">
@@ -1004,8 +1398,12 @@ function renderMonth(){
     const evsH=byDate[ds]||[];
     const isToday=sameDay(date,today);
     const isSel=ds===state.selectedDate;
-    const dots=[...new Set(evsH.map(e=>getCourse(e.courseId)?.color||CATS[e.cat].color))].slice(0,4);
-    html+=`<div class="cal-day ${cell.other?'other':''} ${isWeekend(date)?'we':''} ${isToday?'today':''} ${isSel?'selected':''}" onclick="selectDay('${ds}')">
+    const dots=[...new Set(evsH.map(colorOf))].slice(0,4);
+    const hol=holidayName(ds),br=breakAt(ds),sem=semesterAt(ds);
+    const cls=[cell.other?'other':'',isWeekend(date)?'we':'',isToday?'today':'',isSel?'selected':'',
+      hol?'hol':'',br?'brk':'',sem&&ds===sem.lectureStart?'lec-start':'',sem&&ds===sem.lectureEnd?'lec-end':''].join(' ');
+    const tip=[hol,br?br.name:'',sem&&ds===sem.lectureStart?'Vorlesungsbeginn':'',sem&&ds===sem.lectureEnd?'Vorlesungsende':''].filter(Boolean).join(' · ');
+    html+=`<div class="cal-day ${cls}" onclick="selectDay('${ds}')"${tip?` title="${esc(tip)}"`:''}>
       <div class="cal-num">${cell.d}</div>
       <div class="cal-dots">${dots.map(c=>`<div class="cal-dot" style="background:${c}"></div>`).join('')}</div>
     </div>`;
@@ -1015,14 +1413,29 @@ function renderMonth(){
 }
 function selectDay(ds){
   state.selectedDate=ds;
+  const d=parseD(ds);
+  if(d.getMonth()!==state.cursor.getMonth()||d.getFullYear()!==state.cursor.getFullYear())state.cursor=new Date(d.getFullYear(),d.getMonth(),1);
   renderMonth();
+}
+function dayPillsHtml(ds){
+  const info=dayInfo(ds);
+  const out=[];
+  if(info.hol)out.push(`<span class="phase-pill phase-hol">${esc(info.hol)}</span>`);
+  if(info.sem){
+    if(ds===info.sem.lectureStart)out.push(`<span class="phase-pill phase-lecture">Vorlesungsbeginn</span>`);
+    if(ds===info.sem.lectureEnd)out.push(`<span class="phase-pill phase-lecture">Vorlesungsende</span>`);
+    if(info.phase==='break')out.push(`<span class="phase-pill phase-break">${esc(info.br.name)}</span>`);
+    else if(info.phase==='lecture'){const n=lectureWeekNum(info.sem,parseD(ds));if(n)out.push(`<span class="phase-pill phase-lecture">${esc(semShort(info.sem))} · Woche ${n}</span>`)}
+    else out.push(`<span class="phase-pill phase-free">Vorlesungsfrei</span>`);
+  }
+  return out.length?`<div class="phase-row">${out.join('')}</div>`:'';
 }
 function renderDayDetails(){
   const el=document.getElementById('day-details');
   if(!state.selectedDate){el.innerHTML='';return}
   const d=parseD(state.selectedDate);
   const evs=eventsOnDay(d);
-  let html=`<div class="day-details-hdr">${DE_DAYS_FULL[d.getDay()]}, ${d.getDate()}. ${DE_MONTHS[d.getMonth()]}</div>`;
+  let html=`<div class="day-details-hdr">${DE_DAYS_FULL[d.getDay()]}, ${d.getDate()}. ${DE_MONTHS[d.getMonth()]}</div>`+dayPillsHtml(state.selectedDate);
   if(evs.length===0){
     html+='<div class="empty" style="padding:24px 16px"><div style="color:var(--label-secondary);font-size:15px">Keine Termine</div><button onclick="openSheet(\'new\',null,\''+state.selectedDate+'\')" style="margin-top:12px;color:var(--blue);font-size:15px;font-weight:500">+ Termin hinzufügen</button></div>';
   }else{
@@ -1044,42 +1457,108 @@ function renderWeek(){
     const d=new Date(ws);d.setDate(d.getDate()+i);
     days.push(d);
     const isT=sameDay(d,today);
-    headHtml+=`<div class="week-day-hdr ${isT?'today':''}"><div class="week-day-name">${DE_DAYS_SHORT[d.getDay()]}</div><div class="week-day-num">${d.getDate()}</div></div>`;
+    headHtml+=`<div class="week-day-hdr ${isT?'today':''} ${holidayName(fmtD(d))?'hol':''}"><div class="week-day-name">${DE_DAYS_SHORT[d.getDay()]}</div><div class="week-day-num">${d.getDate()}</div></div>`;
   }
   document.getElementById('week-head').innerHTML=headHtml;
-  let gridHtml='';
-  for(let h=7;h<=22;h++){
-    gridHtml+=`<div class="week-hour-label">${pad(h)}:00</div>`;
-    for(let i=0;i<7;i++){gridHtml+='<div class="week-hour-cell" data-h="'+h+'" data-d="'+i+'"></div>'}
+
+  // Semesterphase der Woche
+  const sem=semesterAt(ws)||semesterAt(we);
+  let phase='';
+  if(sem){
+    const n=lectureWeekNum(sem,ws);
+    const br=days.map(d=>breakAt(fmtD(d))).find(Boolean);
+    if(n)phase=`<span class="phase-pill phase-lecture">${esc(semShort(sem))} · Woche ${n}/${lectureWeeks(sem).length}</span>`;
+    else if(br)phase=`<span class="phase-pill phase-break">${esc(br.name)}</span>`;
+    else phase=`<span class="phase-pill phase-free">Vorlesungsfrei</span>`;
   }
-  const grid=document.getElementById('week-grid');
-  grid.innerHTML=gridHtml;
-  const weekStartD=new Date(ws);
+  document.getElementById('week-phase').innerHTML=phase;
+
   const weekEnd=new Date(ws);weekEnd.setDate(weekEnd.getDate()+6);weekEnd.setHours(23,59,59);
-  const evs=eventsInRange(weekStartD,weekEnd);
-  evs.forEach(e=>{
-    if(!e.timeStart)return;
-    const d=parseD(e.date);
-    const dayIdx=(d.getDay()+6)%7;
-    const [sh,sm]=e.timeStart.split(':').map(Number);
-    const [eh,em]=(e.timeEnd||e.timeStart).split(':').map(Number);
-    if(sh<7||sh>22)return;
-    const startMin=(sh-7)*60+sm;
-    const endMin=Math.min(16*60,(eh-7)*60+em);
-    const top=(startMin/60)*40;
-    const height=Math.max(18,((endMin-startMin)/60)*40);
-    const cell=grid.querySelector(`[data-h="7"][data-d="${dayIdx}"]`);
-    if(!cell)return;
-    const course=getCourse(e.courseId);
-    const color=course?course.color:CATS[e.cat].color;
-    const origId=e.id.split('@')[0];
-    const ev=document.createElement('div');
-    ev.className='week-event';
-    ev.style.cssText=`top:${top}px;height:${height}px;background:${color};`;
-    ev.textContent=e.title;
-    ev.onclick=()=>openSheet('edit',origId);
-    cell.appendChild(ev);
+  const evs=eventsInRange(new Date(ws),weekEnd);
+
+  // Ganztägige Zeile: Termine ohne Uhrzeit, Feiertage, Pausen
+  const allday=days.map(()=>[]);
+  days.forEach((d,i)=>{
+    const ds=fmtD(d),hol=holidayName(ds),br=breakAt(ds);
+    if(hol)allday[i].push(`<div class="week-allday-item hol" title="${esc(hol)}">${esc(hol)}</div>`);
+    else if(br&&(i===0||!breakAt(fmtD(days[i-1]))))allday[i].push(`<div class="week-allday-item brk" title="${esc(br.name)}">${esc(br.name)}</div>`);
   });
+  evs.filter(e=>!e.timeStart).forEach(e=>{
+    const i=(parseD(e.date).getDay()+6)%7;
+    allday[i].push(`<div class="week-allday-item" style="background:${colorOf(e)}" onclick="openSheet('edit','${e.id}',null,'${e.date}')" title="${esc(e.title)}">${esc(e.title)}</div>`);
+  });
+  document.getElementById('week-allday').innerHTML=allday.some(a=>a.length)
+    ?`<div class="week-allday"><div class="week-allday-lbl">ganzt.</div>${allday.map(a=>`<div class="week-allday-cell">${a.join('')}</div>`).join('')}</div>`:'';
+
+  // Stundenraster dynamisch an frühe/späte Termine anpassen
+  const timed=evs.filter(e=>e.timeStart).map(e=>{
+    const s=toMin(e.timeStart);
+    let en=e.timeEnd?toMin(e.timeEnd):s+30;
+    if(en<=s)en=s+30;
+    return{e,s,en,day:(parseD(e.date).getDay()+6)%7};
+  });
+  let minH=7,maxH=23;
+  timed.forEach(t=>{minH=Math.min(minH,Math.floor(t.s/60));maxH=Math.max(maxH,Math.min(24,Math.ceil(t.en/60)))});
+  const HOUR=40,height=(maxH-minH)*HOUR;
+  let hours='<div class="week-hours">';
+  for(let h=minH;h<maxH;h++)hours+=`<div class="week-hour-label">${pad(h)}:00</div>`;
+  hours+='</div>';
+  let cols='';
+  days.forEach((d,i)=>{
+    const ds=fmtD(d);
+    const off=holidayName(ds)||breakAt(ds);
+    cols+=`<div class="week-col ${sameDay(d,today)?'today':''} ${off?'off':''}" data-d="${i}" style="height:${height}px"></div>`;
+  });
+  const grid=document.getElementById('week-grid');
+  grid.innerHTML=hours+cols;
+
+  for(let i=0;i<7;i++){
+    const col=grid.querySelector(`.week-col[data-d="${i}"]`);
+    layoutOverlaps(timed.filter(t=>t.day===i)).forEach(t=>{
+      const top=(t.s-minH*60)/60*HOUR;
+      const h=Math.max(18,(Math.max(t.en,t.s+20)-t.s)/60*HOUR-1);
+      const el=document.createElement('div');
+      el.className='week-event';
+      const w=100/t.ncols;
+      el.style.cssText=`top:${top}px;height:${h}px;background:${colorOf(t.e)};left:calc(${t.col*w}% + 1px);right:auto;width:calc(${w}% - 2px);`;
+      el.innerHTML=esc(t.e.title)+(h>34?`<small>${t.e.timeStart}${t.e.location?' · '+esc(t.e.location):''}</small>`:'');
+      el.title=t.e.title+' · '+t.e.timeStart+(t.e.timeEnd?'–'+t.e.timeEnd:'');
+      el.onclick=()=>openSheet('edit',t.e.id,null,t.e.date);
+      col.appendChild(el);
+    });
+  }
+  state._weekGrid={minH,HOUR};
+  updateWeekNowLine();
+}
+function updateWeekNowLine(){
+  const grid=document.getElementById('week-grid');
+  if(!grid||!state._weekGrid)return;
+  grid.querySelectorAll('.week-now').forEach(n=>n.remove());
+  const col=grid.querySelector('.week-col.today');
+  if(!col)return;
+  const now=new Date();
+  const top=((now.getHours()*60+now.getMinutes())-state._weekGrid.minH*60)/60*state._weekGrid.HOUR;
+  if(top<0||top>col.offsetHeight)return;
+  const line=document.createElement('div');
+  line.className='week-now';line.style.top=top+'px';
+  col.appendChild(line);
+}
+// Überlappende Termine nebeneinander statt übereinander darstellen
+function layoutOverlaps(items){
+  items.sort((a,b)=>a.s-b.s||b.en-a.en);
+  let cluster=[],clusterEnd=-1;
+  const flush=()=>{
+    const cols=[];
+    cluster.forEach(t=>{let c=cols.findIndex(end=>end<=t.s);if(c<0){c=cols.length;cols.push(0)}cols[c]=t.en;t.col=c});
+    cluster.forEach(t=>t.ncols=cols.length);
+    cluster=[];
+  };
+  items.forEach(t=>{
+    if(cluster.length&&t.s>=clusterEnd){flush();clusterEnd=-1}
+    cluster.push(t);clusterEnd=Math.max(clusterEnd,t.en);
+  });
+  if(cluster.length)flush();
+  return items;
 }
 function navWeek(dir){
   const d=new Date(state.weekCursor);
@@ -1099,25 +1578,54 @@ function goToToday(){
   renderMonth();
 }
 
+const CHEVRON_DOWN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
 function renderCourses(){
   const el=document.getElementById('courses-content');
-  if(state.courses.length===0){
+  const sem=activeSemester();
+  document.getElementById('courses-sem-chip').innerHTML=`<button class="sem-chip" onclick="openSheet('semesters')">${sem?esc(semShort(sem)):'Kein Semester'} ${CHEVRON_DOWN}</button>`;
+  if(!sem){
+    const k=semesterKeyFor(new Date());
     el.innerHTML=`<div class="empty" style="margin-top:40px">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-      <div class="empty-title">Noch keine Kurse</div>
-      <div>Lege deine Vorlesungen, Übungen und Seminare an – so werden alle Termine automatisch farbig gruppiert.</div>
-      <button onclick="openSheet('course')" style="margin-top:16px;color:var(--blue);font-size:15px;font-weight:500">+ Ersten Kurs anlegen</button>
+      <div class="empty-title">Kein Semester ausgewählt</div>
+      <div>Kurse gehören immer zu einem Semester. Lege zuerst eins an.</div>
+      <button onclick="openSemesterForm(null,'${k.type}',${k.year})" style="margin-top:16px;color:var(--blue);font-size:15px;font-weight:500">+ ${semesterName(k.type,k.year)} anlegen</button>
     </div>`;
     return;
   }
-  let html='<div style="padding:12px 0 20px">';
-  state.courses.forEach(c=>{
+  const courses=semesterCourses(sem);
+  if(courses.length===0){
+    const prev=sortedSemesters().find(s=>s.id!==sem.id&&s.start<sem.start&&semesterCourses(s).length);
+    el.innerHTML=`<div class="empty" style="margin-top:40px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      <div class="empty-title">Noch keine Kurse im ${esc(semShort(sem))}</div>
+      <div>Lege deine Vorlesungen, Übungen und Seminare an – so werden alle Termine automatisch farbig gruppiert.</div>
+      <button onclick="openSheet('course')" style="margin-top:16px;color:var(--blue);font-size:15px;font-weight:500">+ Ersten Kurs anlegen</button>
+      ${prev?`<br><button onclick="copyCourses('${prev.id}','${sem.id}');saveState();renderCourses();toast('Kurse übernommen')" style="margin-top:12px;color:var(--blue);font-size:15px;font-weight:500">Kurse aus ${esc(semShort(prev))} übernehmen</button>`:''}
+    </div>`;
+    return;
+  }
+  const ects=courses.reduce((s,c)=>s+(Number(c.ects)||0),0);
+  const ids=new Set(courses.map(c=>c.id));
+  const now=new Date();
+  const upcoming=eventsInRange(now,addDays(now,120)).filter(e=>ids.has(e.courseId));
+  const deadlines=upcoming.filter(e=>['abgabe','klausur','pruefung'].includes(e.cat)).length;
+  let html=`<div style="padding:12px 0 20px">
+    <div class="course-summary">
+      <div class="course-stat"><div class="course-stat-num">${courses.length}</div><div class="course-stat-lbl">${courses.length===1?'Kurs':'Kurse'}</div></div>
+      <div class="course-stat"><div class="course-stat-num">${ects||'–'}</div><div class="course-stat-lbl">ECTS</div></div>
+      <div class="course-stat"><div class="course-stat-num">${deadlines}</div><div class="course-stat-lbl">Deadlines offen</div></div>
+    </div>`;
+  const nowStr=fmtD(now),nowT=pad(now.getHours())+':'+pad(now.getMinutes());
+  courses.forEach(c=>{
     const count=state.events.filter(e=>e.courseId===c.id).length;
+    const next=upcoming.find(e=>e.courseId===c.id&&(e.date>nowStr||!e.timeStart||e.timeStart>=nowT));
+    const nextStr=next?' · '+(next.date===nowStr?'heute':DE_DAYS_SHORT[parseD(next.date).getDay()]+' '+fmtShort(next.date))+(next.timeStart?' '+next.timeStart:''):'';
     html+=`<div class="course-card" onclick="openSheet('course','${c.id}')">
       <div class="course-swatch" style="background:${c.color}">${esc(c.short||c.name.slice(0,2).toUpperCase())}</div>
       <div class="course-info">
         <div class="course-name">${esc(c.name)}</div>
-        <div class="course-meta">${count} ${count===1?'Termin':'Termine'}${c.lecturer?' · '+esc(c.lecturer):''}</div>
+        <div class="course-meta">${count} ${count===1?'Termin':'Termine'}${c.ects?' · '+esc(c.ects)+' ECTS':''}${c.lecturer?' · '+esc(c.lecturer):''}</div>
+        ${next?`<div class="course-meta" style="color:${c.color};font-weight:500">Nächster: ${esc(catOf(next).label)}${nextStr}</div>`:''}
       </div>
       <svg class="chevron" viewBox="0 0 12 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 2 10 9 2 16"/></svg>
     </div>`;
@@ -1130,8 +1638,22 @@ function renderMore(){
   const el=document.getElementById('more-content');
   const total=state.events.length;
   const upcoming=eventsInRange(new Date(),new Date(Date.now()+30*86400000)).length;
+  const sem=activeSemester();
   el.innerHTML=`
   <div style="padding-top:8px">
+    <div class="section-hdr">Semester</div>
+    <div class="card">
+      <button class="row" onclick="openSheet('semesters')" style="width:100%;text-align:left">
+        <div class="row-icon" style="background:#5856D6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+        <div class="row-main"><div class="row-title">Semester verwalten</div><div class="row-sub">${sem?'Aktiv: '+esc(sem.name):'Noch kein Semester'} · ${state.semesters.length} gesamt</div></div>
+        <svg class="chevron" viewBox="0 0 12 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 2 10 9 2 16"/></svg>
+      </button>
+      ${sem?`<button class="row" onclick="openSemesterForm('${sem.id}')" style="width:100%;text-align:left">
+        <div class="row-icon" style="background:#FF9500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+        <div class="row-main"><div class="row-title">Vorlesungszeit & Pausen</div><div class="row-sub">${fmtShort(sem.lectureStart)} – ${fmtShort(sem.lectureEnd)} · ${lectureWeeks(sem).length} Wochen</div></div>
+        <svg class="chevron" viewBox="0 0 12 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 2 10 9 2 16"/></svg>
+      </button>`:''}
+    </div>
     <div class="section-hdr">KI-Assistent</div>
     <div class="card">
       <button class="row" onclick="openAI()" style="width:100%;text-align:left">
@@ -1155,9 +1677,14 @@ function renderMore(){
     <div class="card">
       <button class="row" onclick="exportICS()" style="width:100%;text-align:left">
         <div class="row-icon" style="background:#007AFF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
-        <div class="row-main"><div class="row-title">Als .ics exportieren</div><div class="row-sub">Öffne mit iOS Kalender</div></div>
+        <div class="row-main"><div class="row-title">Alles als .ics exportieren</div><div class="row-sub">Öffne mit iOS Kalender</div></div>
         <svg class="chevron" viewBox="0 0 12 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 2 10 9 2 16"/></svg>
       </button>
+      ${sem?`<button class="row" onclick="exportICS('${sem.id}')" style="width:100%;text-align:left">
+        <div class="row-icon" style="background:#5AC8FA"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+        <div class="row-main"><div class="row-title">${esc(semShort(sem))} als .ics</div><div class="row-sub">Nur Termine dieses Semesters</div></div>
+        <svg class="chevron" viewBox="0 0 12 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 2 10 9 2 16"/></svg>
+      </button>`:''}
       <button class="row" onclick="exportJSON()" style="width:100%;text-align:left">
         <div class="row-icon" style="background:#34C759"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
         <div class="row-main"><div class="row-title">Backup erstellen</div><div class="row-sub">Alle Daten als JSON</div></div>
@@ -1175,7 +1702,7 @@ function renderMore(){
     </div>
     <div class="section-hdr">App</div>
     <div class="card">
-      <div class="row"><div class="row-main"><div class="row-title">Version</div></div><div class="row-right">1.0</div></div>
+      <div class="row"><div class="row-main"><div class="row-title">Version</div></div><div class="row-right">2.0</div></div>
       ${isIOS()&&!isStandalone()?'<button class="row" onclick="showInstallHelp()" style="width:100%;text-align:left"><div class="row-icon" style="background:#5856D6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M3 15v4a2 2 0 002 2h14a2 2 0 002-2v-4"/></svg></div><div class="row-main"><div class="row-title">Auf Home-Bildschirm</div><div class="row-sub">So wird sie zur echten App</div></div><svg class="chevron" viewBox="0 0 12 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 2 10 9 2 16"/></svg></button>':''}
     </div>
     <div style="padding:16px;font-size:12px;color:var(--label-tertiary);text-align:center;line-height:1.5">Alle Daten bleiben lokal auf deinem Gerät.<br>Keine Cloud, keine Tracker.</div>
@@ -1183,9 +1710,10 @@ function renderMore(){
   </div>`;
 }
 
-function openSheet(mode,id,prefDate){
+function openSheet(mode,id,prefDate,occDate){
   state.sheetMode=mode;
   state.editId=id||null;
+  state.editOcc=null;
   const title=document.getElementById('sheet-title');
   const body=document.getElementById('sheet-body');
   const saveBtn=document.getElementById('sheet-save');
@@ -1194,18 +1722,35 @@ function openSheet(mode,id,prefDate){
   saveBtn.onclick=saveSheet;
   if(mode==='new'||mode==='edit'){
     const existing=id?state.events.find(e=>e.id===id):null;
-    state.sheetData=existing?{...existing}:{
-      title:'',cat:'vorlesung',courseId:state.courses[0]?.id||'',
+    if(id&&!existing){toast('Termin nicht gefunden');return}
+    const sem=activeSemester();
+    const defCourse=semesterCourses(sem)[0]||state.courses[0];
+    state.sheetData=existing?{...existing,exdates:[...(existing.exdates||[])]}:{
+      title:'',cat:'vorlesung',courseId:defCourse?.id||'',
       date:prefDate||state.selectedDate||fmtD(new Date()),
-      timeStart:'',timeEnd:'',location:'',note:'',repeat:'none',repeatUntil:''
+      timeStart:'',timeEnd:'',location:'',note:'',repeat:'none',repeatUntil:'',skipBreaks:true,exdates:[]
     };
+    // Bei Serien: angetipptes Vorkommen merken, damit "nur diesen Termin" möglich ist
+    if(existing&&isSeries(existing)&&occDate){
+      state.editOcc=occDate;
+      state.sheetData.date=occDate;
+    }
     title.textContent=existing?'Termin bearbeiten':'Neuer Termin';
     body.innerHTML=renderEventForm();
   }else if(mode==='course'){
     const existing=id?state.courses.find(c=>c.id===id):null;
-    state.sheetData=existing?{...existing}:{name:'',short:'',color:PALETTE[state.courses.length%PALETTE.length],lecturer:''};
+    state.sheetData=existing?{...existing}:{name:'',short:'',color:PALETTE[state.courses.length%PALETTE.length],lecturer:'',ects:'',semesterId:state.activeSemesterId||''};
     title.textContent=existing?'Kurs bearbeiten':'Neuer Kurs';
     body.innerHTML=renderCourseForm();
+  }else if(mode==='semesters'){
+    title.textContent='Semester';
+    saveBtn.textContent='Fertig';
+    saveBtn.onclick=closeSheet;
+    body.innerHTML=renderSemesterList();
+  }else if(mode==='semester'){
+    title.textContent=id?'Semester bearbeiten':'Neues Semester';
+    saveBtn.onclick=saveSemester;
+    body.innerHTML=renderSemesterForm();
   }else if(mode==='ai'){
     title.textContent='KI-Import';
     saveBtn.style.display='none';
@@ -1231,8 +1776,12 @@ function renderEventForm(){
       <span class="cat-chip-dot" style="background:${v.color}"></span>
       <span style="color:var(--label);font-weight:500">${v.label}</span>
     </button>`).join('');
-  const courseOpts=`<option value="">— kein Kurs —</option>`+state.courses.map(c=>`<option value="${c.id}" ${d.courseId===c.id?'selected':''}>${esc(c.name)}</option>`).join('');
+  const courseOpts=courseOptionsHtml(d.courseId,'— kein Kurs —');
+  const sem=semesterForForm(d);
+  const exCount=(d.exdates||[]).length;
+  const occBanner=state.editOcc?`<div class="occ-banner">Serientermin · angetippt: <b>${fmtLong(state.editOcc)}</b><br>Beim Speichern kannst du wählen, ob nur dieser oder alle Termine geändert werden.</div>`:'';
   return `
+    ${occBanner}
     <div class="form-group">
       <div class="form-card">
         <div class="form-row">
@@ -1275,7 +1824,7 @@ function renderEventForm(){
       <div class="form-card">
         <div class="form-row">
           <div class="form-label">Rhythmus</div>
-          <select class="form-input" onchange="setField('repeat',this.value);renderSheetBody()" style="text-align:right;color:var(--label-secondary)">
+          <select class="form-input" onchange="onRepeatChange(this.value)" style="text-align:right;color:var(--label-secondary)">
             <option value="none" ${d.repeat==='none'?'selected':''}>Nie</option>
             <option value="daily" ${d.repeat==='daily'?'selected':''}>Täglich</option>
             <option value="weekly" ${d.repeat==='weekly'?'selected':''}>Wöchentlich</option>
@@ -1285,9 +1834,21 @@ function renderEventForm(){
         </div>
         ${d.repeat!=='none'?`<div class="form-row">
           <div class="form-label">Bis</div>
-          <input type="date" class="form-input" value="${d.repeatUntil||''}" onchange="setField('repeatUntil',this.value)" placeholder="Unbegrenzt">
+          <input type="date" class="form-input" id="f_until" value="${d.repeatUntil||''}" onchange="setField('repeatUntil',this.value)" placeholder="Unbegrenzt">
+        </div>
+        <div class="form-row">
+          <div class="form-main" style="flex:1">
+            <div style="font-size:17px">In Pausen aussetzen</div>
+            <div style="font-size:12px;color:var(--label-secondary);margin-top:1px">Keine Termine an Feiertagen & in vorlesungsfreien Pausen</div>
+          </div>
+          <label class="switch"><input type="checkbox" ${d.skipBreaks?'checked':''} onchange="setField('skipBreaks',this.checked)"><span></span></label>
         </div>`:''}
       </div>
+      ${d.repeat!=='none'&&sem?`<div class="form-hint" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <button type="button" class="quick-chip" onclick="setUntil('${sem.lectureEnd}')">Bis Vorlesungsende · ${fmtShort(sem.lectureEnd)}</button>
+        <button type="button" class="quick-chip" onclick="setUntil('${sem.end}')">Bis Semesterende · ${fmtShort(sem.end)}</button>
+      </div>`:''}
+      ${d.repeat!=='none'&&exCount?`<div class="form-hint">${exCount} ${exCount===1?'Termin':'Termine'} dieser Serie ausgelassen · <button type="button" style="color:var(--blue);font-size:12px" onclick="state.sheetData.exdates=[];renderSheetBody()">wiederherstellen</button></div>`:''}
     </div>
     <div class="section-hdr">Notiz</div>
     <div class="form-group">
@@ -1297,10 +1858,38 @@ function renderEventForm(){
         </div>
       </div>
     </div>
-    ${state.editId?`<button class="sheet-action-btn" onclick="deleteEvent()">Termin löschen</button>`:''}
+    ${state.editId&&state.editOcc?`<button class="sheet-action-btn" onclick="deleteOccurrence()">Nur diesen Termin löschen</button>
+      <button class="sheet-action-btn" style="margin-top:8px" onclick="deleteEvent()">Ganze Serie löschen</button>`
+      :state.editId?`<button class="sheet-action-btn" onclick="deleteEvent()">${isSeries(d)?'Serie löschen':'Termin löschen'}</button>`:''}
     <div style="height:32px"></div>
   `;
 }
+function courseOptionsHtml(selected,emptyLabel){
+  const act=activeSemester();
+  const groups=sortedSemesters().sort((a,b)=>(b===act)-(a===act));
+  let html=emptyLabel!=null?`<option value="">${esc(emptyLabel)}</option>`:'';
+  groups.forEach(s=>{
+    const cs=semesterCourses(s);
+    if(!cs.length)return;
+    html+=`<optgroup label="${esc(s.name)}">`+cs.map(c=>`<option value="${c.id}" ${selected===c.id?'selected':''}>${esc(c.name)}</option>`).join('')+'</optgroup>';
+  });
+  const orphans=state.courses.filter(c=>!getSemester(c.semesterId));
+  if(orphans.length)html+='<optgroup label="Ohne Semester">'+orphans.map(c=>`<option value="${c.id}" ${selected===c.id?'selected':''}>${esc(c.name)}</option>`).join('')+'</optgroup>';
+  return html;
+}
+function semesterForForm(d){const c=getCourse(d.courseId);return (c&&getSemester(c.semesterId))||semesterAt(d.date||fmtD(new Date()))||activeSemester()}
+function onRepeatChange(v){
+  const d=state.sheetData;
+  const was=d.repeat;
+  d.repeat=v;
+  if(v!=='none'&&(was==='none'||!was)){
+    const sem=semesterForForm(d);
+    if(!d.repeatUntil&&sem&&sem.lectureEnd>=d.date)d.repeatUntil=sem.lectureEnd;
+    if(d.skipBreaks===undefined)d.skipBreaks=true;
+  }
+  renderSheetBody();
+}
+function setUntil(ds){state.sheetData.repeatUntil=ds;const el=document.getElementById('f_until');if(el)el.value=ds}
 function renderCourseForm(){
   const d=state.sheetData;
   const swatches=PALETTE.map(c=>`<button class="color-swatch ${d.color===c?'sel':''}" style="background:${c};color:${c}" onclick="setField('color','${c}');renderSheetBody()" aria-label="Farbe"></button>`).join('');
@@ -1318,6 +1907,17 @@ function renderCourseForm(){
           <div class="form-label">Dozent:in</div>
           <input class="form-input" placeholder="Optional" value="${esc(d.lecturer||'')}" oninput="setField('lecturer',this.value)">
         </div>
+        <div class="form-row">
+          <div class="form-label">ECTS</div>
+          <input class="form-input" type="number" inputmode="decimal" min="0" max="60" step="0.5" placeholder="Optional" value="${esc(d.ects||'')}" oninput="setField('ects',this.value)">
+        </div>
+        <div class="form-row">
+          <div class="form-label">Semester</div>
+          <select class="form-input" onchange="setField('semesterId',this.value)" style="text-align:right;color:var(--label-secondary)">
+            ${sortedSemesters().map(s=>`<option value="${s.id}" ${d.semesterId===s.id?'selected':''}>${esc(s.name)}</option>`).join('')}
+            ${!state.semesters.length?'<option value="">—</option>':''}
+          </select>
+        </div>
       </div>
     </div>
     <div class="section-hdr">Farbe</div>
@@ -1326,9 +1926,228 @@ function renderCourseForm(){
     <div style="height:32px"></div>
   `;
 }
+
+/* ---------- Semesterverwaltung ---------- */
+const CHECK_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+const PENCIL_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>';
+function renderSemesterList(){
+  const today=fmtD(new Date());
+  const list=sortedSemesters();
+  const rows=list.map(s=>{
+    const act=s.id===state.activeSemesterId;
+    const status=today<s.start?'Kommend':today>s.end?'Vergangen':'Aktuell';
+    const stCls=status==='Aktuell'?'phase-lecture':status==='Kommend'?'phase-break':'';
+    const n=semesterCourses(s).length;
+    return `<div class="row" style="cursor:pointer" onclick="setActiveSemester('${s.id}')">
+      <div class="sem-row-check">${act?CHECK_SVG:''}</div>
+      <div class="row-main">
+        <div class="row-title" style="${act?'font-weight:600':''}">${esc(s.name)}</div>
+        <div class="row-sub" style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:4px"><span class="phase-pill ${stCls}" style="${stCls?'':'background:var(--fill-tertiary);color:var(--label-secondary)'}">${status}</span>${fmtShort(s.lectureStart)} – ${fmtShort(s.lectureEnd)} · ${n} ${n===1?'Kurs':'Kurse'}</div>
+      </div>
+      <button class="sem-edit" onclick="event.stopPropagation();openSemesterForm('${s.id}')" aria-label="Bearbeiten">${PENCIL_SVG}</button>
+    </div>`;
+  }).join('');
+  const latest=list[0];
+  const nk=latest?nextSemesterKey({type:latest.type,year:latest.year}):semesterKeyFor(new Date());
+  return `
+    ${list.length?`<div class="section-hdr">Aktives Semester wählen</div><div class="card">${rows}</div>
+    <div class="form-hint">Das aktive Semester bestimmt Kursliste, Fortschrittsbalken und Standard-Enddatum für Serien. Der Kalender zeigt immer alle Termine.</div>`
+    :`<div class="empty"><div class="empty-title">Noch keine Semester</div><div>Lege dein erstes Semester an.</div></div>`}
+    <div style="height:16px"></div>
+    <button class="add-link" onclick="openSemesterForm(null,'${nk.type}',${nk.year})">+ ${semesterName(nk.type,nk.year)} anlegen</button>
+    <button class="add-link" style="margin-top:8px;font-size:15px;color:var(--label-secondary)" onclick="openSemesterForm(null)">Anderes Semester …</button>
+    <div style="height:32px"></div>`;
+}
+function setActiveSemester(id){
+  state.activeSemesterId=id;
+  saveState();
+  const s=getSemester(id);
+  renderSheetBody();
+  renderCurrent();
+  toast(semShort(s)+' aktiv');
+}
+function openSemesterForm(id,type,year){
+  const existing=id?getSemester(id):null;
+  if(existing){
+    state.sheetData=JSON.parse(JSON.stringify(existing));
+  }else{
+    const k=type?{type,year}:semesterKeyFor(new Date());
+    state.sheetData={...suggestSemester(k.type,k.year),copyFrom:''};
+  }
+  openSheet('semester',id||null);
+}
+function renderSemesterForm(){
+  const d=state.sheetData;
+  const isNew=!state.editId;
+  const others=sortedSemesters().filter(s=>semesterCourses(s).length);
+  const breaks=(d.breaks||[]).map((b,i)=>`
+    <div class="break-card">
+      <div class="form-row">
+        <input class="form-input left" placeholder="Name (z.B. Weihnachtspause)" value="${esc(b.name||'')}" oninput="setBreakField(${i},'name',this.value)" style="font-weight:500">
+        <button type="button" class="break-remove" onclick="removeBreak(${i})">Entfernen</button>
+      </div>
+      <div class="form-row"><div class="form-label">Von</div><input type="date" class="form-input" value="${b.start||''}" onchange="setBreakField(${i},'start',this.value)"></div>
+      <div class="form-row"><div class="form-label">Bis</div><input type="date" class="form-input" value="${b.end||''}" onchange="setBreakField(${i},'end',this.value)"></div>
+    </div>`).join('');
+  return `
+    <div class="form-group">
+      <div class="form-card">
+        <div class="form-row">
+          <div class="form-label">Typ</div>
+          <div class="segmented" style="margin:0;flex:1;max-width:220px;margin-left:auto">
+            <button type="button" class="seg ${d.type==='WS'?'active':''}" onclick="setSemType('WS')">Winter</button>
+            <button type="button" class="seg ${d.type==='SS'?'active':''}" onclick="setSemType('SS')">Sommer</button>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-label">Jahr</div>
+          <div style="margin-left:auto" class="stepper">
+            <button type="button" onclick="setSemYear(-1)" aria-label="Jahr zurück">−</button>
+            <span>${d.type==='WS'?d.year+'/'+pad((d.year+1)%100):d.year}</span>
+            <button type="button" onclick="setSemYear(1)" aria-label="Jahr vor">+</button>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-label">Name</div>
+          <input class="form-input" id="f_semname" value="${esc(d.name||'')}" oninput="setField('name',this.value)">
+        </div>
+      </div>
+      ${!isNew?`<div class="form-hint"><button type="button" class="quick-chip" onclick="applySemSuggestion()">Standard-Daten für ${esc(semesterName(d.type,d.year))} einsetzen</button></div>`:''}
+    </div>
+    <div class="section-hdr">Vorlesungszeit</div>
+    <div class="form-group">
+      <div class="form-card">
+        <div class="form-row"><div class="form-label">Beginn</div><input type="date" class="form-input" value="${d.lectureStart}" onchange="setSemDate('lectureStart',this.value)"></div>
+        <div class="form-row"><div class="form-label">Ende</div><input type="date" class="form-input" value="${d.lectureEnd}" onchange="setSemDate('lectureEnd',this.value)"></div>
+      </div>
+      <div class="form-hint" id="sem-summary">${semSummary(d)}</div>
+    </div>
+    <div class="section-hdr">Semesterzeitraum</div>
+    <div class="form-group">
+      <div class="form-card">
+        <div class="form-row"><div class="form-label">Beginn</div><input type="date" class="form-input" value="${d.start}" onchange="setSemDate('start',this.value)"></div>
+        <div class="form-row"><div class="form-label">Ende</div><input type="date" class="form-input" value="${d.end}" onchange="setSemDate('end',this.value)"></div>
+      </div>
+      <div class="form-hint">Die Daten sind Vorschläge für deutsche Unis – prüf sie kurz im Vorlesungsverzeichnis deiner Hochschule.</div>
+    </div>
+    <div class="section-hdr">Vorlesungsfreie Pausen</div>
+    ${breaks||'<div class="form-hint" style="padding-top:0;padding-bottom:8px">Keine Pausen eingetragen. Feiertage werden automatisch berücksichtigt.</div>'}
+    <button type="button" class="add-link" onclick="addBreak()">+ Pause hinzufügen</button>
+    ${isNew&&others.length?`
+    <div class="section-hdr" style="margin-top:16px">Kurse übernehmen</div>
+    <div class="form-card">
+      <div class="form-row">
+        <div class="form-label">Aus</div>
+        <select class="form-input" onchange="setField('copyFrom',this.value)" style="text-align:right;color:var(--label-secondary)">
+          <option value="">Nicht übernehmen</option>
+          ${others.map(s=>`<option value="${s.id}" ${d.copyFrom===s.id?'selected':''}>${esc(s.name)} (${semesterCourses(s).length})</option>`).join('')}
+        </select>
+      </div>
+    </div>
+    <div class="form-hint">Übernimmt Name, Kürzel, Farbe, Dozent:in und ECTS – ohne Termine.</div>`:''}
+    ${!isNew?`<button class="sheet-action-btn" onclick="deleteSemester()">Semester löschen</button>`:''}
+    <div style="height:32px"></div>`;
+}
+function semSummary(d){
+  if(!d.lectureStart||!d.lectureEnd||d.lectureEnd<d.lectureStart)return '<span style="color:var(--red)">Bitte gültige Vorlesungszeit angeben.</span>';
+  const tmp={id:'_tmp',...d};
+  const saved=_breakIdx;
+  // Pausen des Formulars (statt der gespeicherten) für die Wochenzählung verwenden
+  _breakIdx=(d.breaks||[]).filter(b=>b.start&&b.end);
+  delete _weeksCache._tmp;
+  const n=lectureWeeks(tmp).length;
+  delete _weeksCache._tmp;
+  _breakIdx=saved;
+  let hol=0;
+  for(let dd=parseD(d.lectureStart);dd<=parseD(d.lectureEnd);dd=addDays(dd,1)){const ds=fmtD(dd);if(holidayName(ds)&&!isWeekend(dd))hol++}
+  return `<b>${n} Vorlesungswochen</b>${hol?` · ${hol} ${hol===1?'Feiertag':'Feiertage'} unter der Woche`:''}`;
+}
+function refreshSemSummary(){const el=document.getElementById('sem-summary');if(el)el.innerHTML=semSummary(state.sheetData)}
+function setSemDate(k,v){state.sheetData[k]=v;refreshSemSummary()}
+function setBreakField(i,k,v){state.sheetData.breaks[i][k]=v;if(k!=='name')refreshSemSummary()}
+function addBreak(){(state.sheetData.breaks=state.sheetData.breaks||[]).push({id:bid(),name:'',start:'',end:''});renderSheetBody()}
+function removeBreak(i){state.sheetData.breaks.splice(i,1);renderSheetBody()}
+function setSemType(t){const d=state.sheetData;if(d.type===t)return;d.type=t;onSemKeyChange()}
+function setSemYear(delta){state.sheetData.year+=delta;onSemKeyChange()}
+function onSemKeyChange(){
+  const d=state.sheetData;
+  if(!state.editId){
+    const sug=suggestSemester(d.type,d.year);
+    Object.assign(d,{name:sug.name,start:sug.start,end:sug.end,lectureStart:sug.lectureStart,lectureEnd:sug.lectureEnd,breaks:sug.breaks});
+  }else{
+    const auto=[semesterName('WS',d.year),semesterName('SS',d.year),semesterName('WS',d.year-1),semesterName('SS',d.year-1),semesterName('WS',d.year+1),semesterName('SS',d.year+1)];
+    if(auto.includes(d.name))d.name=semesterName(d.type,d.year);
+  }
+  renderSheetBody();
+}
+function applySemSuggestion(){
+  const d=state.sheetData,sug=suggestSemester(d.type,d.year);
+  Object.assign(d,{name:sug.name,start:sug.start,end:sug.end,lectureStart:sug.lectureStart,lectureEnd:sug.lectureEnd,breaks:sug.breaks});
+  renderSheetBody();
+}
+function saveSemester(){
+  const d=state.sheetData;
+  const nameEl=document.getElementById('f_semname');
+  if(nameEl)d.name=nameEl.value.trim();
+  if(!d.name)d.name=semesterName(d.type,d.year);
+  const req=['start','end','lectureStart','lectureEnd'];
+  if(req.some(k=>!d[k])){toast('Bitte alle Daten ausfüllen');return}
+  if(d.start>d.end){toast('Semesterende liegt vor Beginn');return}
+  if(d.lectureStart>d.lectureEnd){toast('Vorlesungsende liegt vor Beginn');return}
+  if(d.lectureStart<d.start||d.lectureEnd>d.end){toast('Vorlesungszeit muss im Semester liegen');return}
+  const breaks=(d.breaks||[]).filter(b=>b.start||b.end||b.name);
+  for(const b of breaks){
+    if(!b.start||!b.end){toast('Pause: Von und Bis angeben');return}
+    if(b.start>b.end){toast('Pause „'+(b.name||'ohne Name')+'" endet vor Beginn');return}
+    if(!b.name)b.name='Pause';
+  }
+  const clash=state.semesters.find(s=>s.id!==state.editId&&s.start<=d.end&&s.end>=d.start);
+  const commit=()=>{
+    const clean={type:d.type,year:d.year,name:d.name,start:d.start,end:d.end,lectureStart:d.lectureStart,lectureEnd:d.lectureEnd,breaks};
+    let sem;
+    if(state.editId){
+      sem=getSemester(state.editId);
+      Object.assign(sem,clean);
+    }else{
+      sem={id:sid(),...clean};
+      state.semesters.push(sem);
+      state.activeSemesterId=sem.id;
+      if(d.copyFrom)copyCourses(d.copyFrom,sem.id);
+    }
+    saveState();closeSheet();renderCurrent();
+    toast(state.editId?'Semester gespeichert':semShort(sem)+' angelegt');
+  };
+  if(clash)showConfirm('Überschneidung',`Der Zeitraum überschneidet sich mit „${clash.name}". Trotzdem speichern?`,'Speichern','bold',commit);
+  else commit();
+}
+function copyCourses(fromId,toId){
+  const existing=new Set(semesterCourses(getSemester(toId)).map(c=>c.name.toLowerCase()));
+  semesterCourses(getSemester(fromId)).forEach(c=>{
+    if(existing.has(c.name.toLowerCase()))return;
+    state.courses.push({id:cid(),semesterId:toId,name:c.name,short:c.short,color:c.color,lecturer:c.lecturer||'',ects:c.ects||''});
+  });
+}
+function deleteSemester(){
+  const s=getSemester(state.editId);
+  if(!s)return;
+  const cs=semesterCourses(s);
+  const ids=new Set(cs.map(c=>c.id));
+  const evCount=state.events.filter(e=>ids.has(e.courseId)).length;
+  const msg=cs.length?`${cs.length} ${cs.length===1?'Kurs':'Kurse'} und ${evCount} ${evCount===1?'Termin':'Termine'} werden mitgelöscht.`:'Das Semester wird entfernt.';
+  showConfirm(s.name+' löschen',msg,'Löschen','destructive',()=>{
+    state.events=state.events.filter(e=>!ids.has(e.courseId));
+    state.courses=state.courses.filter(c=>!ids.has(c.id));
+    state.semesters=state.semesters.filter(x=>x.id!==s.id);
+    if(state.activeSemesterId===s.id){state.activeSemesterId=null;invalidateCaches();autoSelectSemester()}
+    saveState();closeSheet();renderCurrent();toast('Semester gelöscht');
+  });
+}
+
 function renderSheetBody(){
   const body=document.getElementById('sheet-body');
   if(state.sheetMode==='course')body.innerHTML=renderCourseForm();
+  else if(state.sheetMode==='semesters')body.innerHTML=renderSemesterList();
+  else if(state.sheetMode==='semester')body.innerHTML=renderSemesterForm();
   else if(state.sheetMode==='ai')body.innerHTML=renderAIForm();
   else if(state.sheetMode==='apikey')body.innerHTML=renderAPIKeyForm();
   else body.innerHTML=renderEventForm();
@@ -1356,20 +2175,55 @@ function saveSheet(){
   }else{
     if(!d.title||!d.title.trim()){toast('Titel fehlt');return}
     if(!d.date){toast('Datum fehlt');return}
-    if(state.editId){
-      const i=state.events.findIndex(e=>e.id===state.editId);
-      if(i>-1)state.events[i]={...state.events[i],...d};
-    }else{
-      state.events.push({id:eid(),...d});
+    if(d.timeStart&&d.timeEnd&&d.timeEnd<d.timeStart){toast('Ende liegt vor Beginn');return}
+    if(isSeries(d)&&d.repeatUntil&&d.repeatUntil<d.date){toast('Serienende liegt vor dem Start');return}
+    const done=msg=>{saveState();closeSheet();renderCurrent();toast(msg||'Gespeichert')};
+    if(!state.editId){
+      state.events.push({id:eid(),...d,exdates:isSeries(d)?d.exdates||[]:[]});
+      return done();
     }
-    saveState();closeSheet();renderCurrent();toast('Gespeichert');
+    const i=state.events.findIndex(e=>e.id===state.editId);
+    if(i<0)return done();
+    const orig=state.events[i];
+    const occ=state.editOcc;
+    if(occ&&isSeries(orig)){
+      showChoice('Serientermin ändern','Soll die Änderung nur für '+fmtLong(occ)+' oder für die ganze Serie gelten?',[
+        {label:'Nur diesen Termin',fn:()=>{
+          orig.exdates=[...new Set([...(orig.exdates||[]),occ])];
+          state.events.push({...d,id:eid(),repeat:'none',repeatUntil:'',exdates:[],skipBreaks:false});
+          done('Termin geändert');
+        }},
+        {label:'Alle Termine der Serie',fn:()=>{
+          // Datumsänderung am Vorkommen verschiebt die ganze Serie um dieselbe Anzahl Tage
+          const shift=daysBetween(parseD(occ),parseD(d.date));
+          const newStart=fmtD(addDays(parseD(orig.date),shift));
+          const exdates=shift?(d.exdates||[]).map(x=>fmtD(addDays(parseD(x),shift))):d.exdates;
+          state.events[i]=isSeries(d)?{...orig,...d,date:newStart,exdates}:{...orig,...d,exdates:[]};
+          done();
+        }},
+      ]);
+      return;
+    }
+    state.events[i]={...orig,...d};
+    done();
   }
 }
 function deleteEvent(){
   if(!state.editId)return;
-  showConfirm('Termin löschen','Dieser Termin wird unwiderruflich entfernt.','Löschen','destructive',()=>{
+  const ev=state.events.find(e=>e.id===state.editId);
+  const series=isSeries(ev);
+  showConfirm(series?'Serie löschen':'Termin löschen',series?'Alle Termine dieser Serie werden unwiderruflich entfernt.':'Dieser Termin wird unwiderruflich entfernt.','Löschen','destructive',()=>{
     state.events=state.events.filter(e=>e.id!==state.editId);
     saveState();closeSheet();renderCurrent();toast('Gelöscht');
+  });
+}
+function deleteOccurrence(){
+  const ev=state.events.find(e=>e.id===state.editId);
+  const occ=state.editOcc;
+  if(!ev||!occ)return;
+  showConfirm('Termin auslassen',fmtLong(occ)+' wird aus der Serie entfernt. Alle anderen Termine bleiben.','Auslassen','destructive',()=>{
+    ev.exdates=[...new Set([...(ev.exdates||[]),occ])];
+    saveState();closeSheet();renderCurrent();toast('Termin ausgelassen');
   });
 }
 function deleteCourse(){
@@ -1383,10 +2237,13 @@ function deleteCourse(){
   });
 }
 
-function exportICS(){
+function exportICS(semId){
+  const sem=semId?getSemester(semId):null;
   const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//UniKalender//DE','CALSCALE:GREGORIAN'];
+  if(sem)lines.push('X-WR-CALNAME:'+sem.name);
   const esc=s=>String(s||'').replace(/[,;\\]/g,x=>'\\'+x).replace(/\n/g,'\\n');
-  state.events.forEach(e=>{
+  const evs=sem?state.events.filter(e=>semesterOfEvent(e)?.id===sem.id):state.events;
+  evs.forEach(e=>{
     const course=getCourse(e.courseId);
     const dt=e.date.replace(/-/g,'');
     const ts=(e.timeStart||'00:00').replace(':','')+'00';
@@ -1406,15 +2263,23 @@ function exportICS(){
       if(e.repeat==='biweekly')rr+=';INTERVAL=2';
       if(e.repeatUntil)rr+=';UNTIL='+e.repeatUntil.replace(/-/g,'')+'T235959';
       lines.push(rr);
+      // Ausgelassene Termine (manuell, Pausen, Feiertage) als EXDATE mitgeben
+      const from=parseD(e.date);
+      const to=e.repeatUntil?parseD(e.repeatUntil):addDays(from,366);
+      const skipped=expandEvent(e,from,to,true).filter(o=>o._skipped).map(o=>o.date.replace(/-/g,''));
+      if(skipped.length){
+        if(e.timeStart)lines.push('EXDATE:'+skipped.map(x=>x+'T'+ts).join(','));
+        else lines.push('EXDATE;VALUE=DATE:'+skipped.join(','));
+      }
     }
     lines.push('END:VEVENT');
   });
   lines.push('END:VCALENDAR');
   const blob=new Blob([lines.join('\r\n')],{type:'text/calendar'});
-  downloadBlob(blob,'uni-kalender.ics');
+  downloadBlob(blob,sem?'uni-kalender-'+semShort(sem).replace(/[^\w]+/g,'-').toLowerCase()+'.ics':'uni-kalender.ics');
 }
 function exportJSON(){
-  const blob=new Blob([JSON.stringify({events:state.events,courses:state.courses,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});
+  const blob=new Blob([JSON.stringify({version:4,events:state.events,courses:state.courses,semesters:state.semesters,activeSemesterId:state.activeSemesterId,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'});
   downloadBlob(blob,'uni-kalender-backup.json');
 }
 function importJSON(ev){
@@ -1428,12 +2293,18 @@ function importJSON(ev){
     if(!Array.isArray(d.events)||!Array.isArray(d.courses)){toast('Falsches Format');return}
     const evCount=d.events.length;
     const cCount=d.courses.length;
+    const sCount=Array.isArray(d.semesters)?d.semesters.length:0;
     showConfirm(
       'Backup wiederherstellen',
-      `${cCount} Kurse und ${evCount} Termine werden importiert. Vorhandene Daten werden ersetzt.`,
+      `${sCount?sCount+' Semester, ':''}${cCount} Kurse und ${evCount} Termine werden importiert. Vorhandene Daten werden ersetzt.`,
       'Importieren','bold',()=>{
         state.events=d.events;
         state.courses=d.courses;
+        state.semesters=Array.isArray(d.semesters)?d.semesters:[];
+        state.activeSemesterId=d.activeSemesterId||null;
+        invalidateCaches();
+        migrateState();
+        autoSelectSemester();
         saveState();renderCurrent();toast('Importiert – '+evCount+' Termine geladen');
       }
     );
@@ -1449,8 +2320,8 @@ function downloadBlob(blob,name){
   toast('Exportiert');
 }
 function clearAll(){
-  showConfirm('Alle Daten löschen','Sämtliche Kurse und Termine werden unwiderruflich gelöscht.','Alles löschen','destructive',()=>{
-    state.events=[];state.courses=[];saveState();renderCurrent();toast('Alle Daten gelöscht');
+  showConfirm('Alle Daten löschen','Sämtliche Semester, Kurse und Termine werden unwiderruflich gelöscht.','Alles löschen','destructive',()=>{
+    state.events=[];state.courses=[];state.semesters=[];state.activeSemesterId=null;saveState();renderCurrent();toast('Alle Daten gelöscht');
   });
 }
 
@@ -1469,6 +2340,22 @@ function showConfirm(title,msg,okLabel,okClass,onOk){
     </div>
   </div>`;
   document.getElementById('dlg-ok').onclick=()=>{closeDialog();onOk()};
+}
+function showChoice(title,msg,options){
+  const d=document.getElementById('dialog-container');
+  d.innerHTML=`<div class="dialog-overlay" id="dlg">
+    <div class="dialog">
+      <div class="dialog-body">
+        <div class="dialog-title">${esc(title)}</div>
+        ${msg?`<div class="dialog-msg">${esc(msg)}</div>`:''}
+      </div>
+      <div class="dialog-actions stack">
+        ${options.map((o,i)=>`<button class="${o.cls||''}" data-i="${i}">${esc(o.label)}</button>`).join('')}
+        <button class="bold" onclick="closeDialog()">Abbrechen</button>
+      </div>
+    </div>
+  </div>`;
+  d.querySelectorAll('button[data-i]').forEach(b=>b.onclick=()=>{closeDialog();options[+b.dataset.i].fn()});
 }
 function showAlert(title,msg){
   const d=document.getElementById('dialog-container');
@@ -1560,7 +2447,7 @@ function renderAIForm(){
     'Abgabe Übungsblatt 1 bis 22.10. 23:59 auf Moodle',
     'Klausur Programmierung am 12.2. um 9 Uhr in der Sporthalle'
   ];
-  const courseOpts=`<option value="">Automatisch erkennen</option>`+state.courses.map(c=>`<option value="${c.id}" ${aiState.targetCourseId===c.id?'selected':''}>${esc(c.name)}</option>`).join('');
+  const courseOpts=courseOptionsHtml(aiState.targetCourseId,'Automatisch erkennen');
   const photosHtml=aiState.images.length?`<div class="photo-grid">
     ${aiState.images.map((img,i)=>`<div class="photo-thumb"><img src="${img.dataUrl}"><button class="remove" onclick="removePhoto(${i})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>`).join('')}
     ${aiState.images.length<4?`<label class="add-photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg><input type="file" accept="image/*" capture="environment" style="display:none" onchange="addPhoto(event)"></label>`:''}
@@ -1691,12 +2578,17 @@ async function callClaude(text,images,targetCourseId){
   if(!key)throw new Error('Kein API-Key gespeichert');
   const today=new Date();
   const todayStr=fmtD(today)+' ('+DE_DAYS_FULL[today.getDay()]+')';
-  const courseList=state.courses.map(c=>`  - "${c.id}": ${c.name}${c.short?' ('+c.short+')':''}`).join('\n')||'  (keine vorhanden)';
+  const sem=activeSemester();
+  const promptCourses=semesterCourses(sem).length?semesterCourses(sem):state.courses;
+  const courseList=promptCourses.map(c=>`  - "${c.id}": ${c.name}${c.short?' ('+c.short+')':''}`).join('\n')||'  (keine vorhanden)';
   const targetCourse=targetCourseId?state.courses.find(c=>c.id===targetCourseId):null;
+  const semCtx=sem?`- Aktives Semester: ${sem.name} (Semesterzeitraum ${sem.start} bis ${sem.end}, Vorlesungszeit ${sem.lectureStart} bis ${sem.lectureEnd})
+- Vorlesungsfreie Pausen: ${(sem.breaks||[]).map(b=>`${b.name} ${b.start} bis ${b.end}`).join('; ')||'keine'} (Feiertage und Pausen werden von der App automatisch ausgelassen – dafür KEINE Ausnahmen anlegen)`:'- Kein Semester angelegt.';
   const systemPrompt=`Du bist ein Assistent, der Uni-Informationen in strukturierte Kalendereinträge umwandelt.
 
 KONTEXT:
 - Heutiges Datum: ${todayStr}
+${semCtx}
 - Verfügbare Kurse des Nutzers (mit IDs):
 ${courseList}
 ${targetCourse?`- Der Nutzer hat diese Infos explizit dem Kurs "${targetCourse.name}" (ID: ${targetCourse.id}) zugeordnet. Setze courseId entsprechend, außer der Text widerspricht klar.`:'- Keine Kursvorgabe – versuche anhand des Textes den passenden Kurs zu erkennen. Wenn keiner passt, lass courseId leer.'}
@@ -1714,7 +2606,8 @@ REGELN:
 - Datum-Format: "YYYY-MM-DD"
 - Zeit-Format: "HH:MM" (24h). Wenn keine Zeit: timeStart="" und timeEnd="".
 - Wenn Jahr nicht genannt: nutze das aktuelle oder kommende Jahr so, dass das Datum in der Zukunft liegt.
-- Ein Semester dauert typischerweise ~14 Wochen. Wenn kein Enddatum genannt wird und es sich um wöchentliche Vorlesungen/Übungen/Tutorien handelt, setze repeatUntil auf ca. 14 Wochen nach dem Start.
+- Wenn kein Enddatum genannt wird und es sich um wöchentliche Vorlesungen/Übungen/Tutorien handelt, setze repeatUntil auf das Ende der Vorlesungszeit des aktiven Semesters${sem?' ('+sem.lectureEnd+')':' (ohne Semester: ca. 14 Wochen nach dem Start)'}.
+- Wenn kein Startdatum genannt wird, beginne wöchentliche Termine in der ersten Vorlesungswoche (frühestens ab heute).
 - "KW 42" bedeutet Kalenderwoche 42 – rechne das korrekte Datum aus.
 - location: Raum, Gebäude, "Moodle", "online" etc. – nur wenn genannt.
 - title: kurz und klar (z.B. "Analysis II Vorlesung", "Abgabe Übungsblatt 3", "Klausur Programmierung")
@@ -1773,19 +2666,25 @@ Antworte AUSSCHLIESSLICH mit dem JSON-Objekt, ohne Markdown-Backticks, ohne Erkl
     else throw new Error('KI-Antwort war kein gültiges JSON');
   }
   const raw=parsed.events||[];
-  return raw.map(e=>({
-    id:eid(),
-    title:String(e.title||'').trim()||'Unbenannter Termin',
-    cat:CATS[e.cat]?e.cat:'sonstiges',
-    courseId:e.courseId&&state.courses.some(c=>c.id===e.courseId)?e.courseId:(targetCourseId||''),
-    date:e.date||fmtD(today),
-    timeStart:e.timeStart||'',
-    timeEnd:e.timeEnd||'',
-    location:e.location||'',
-    note:e.note||'',
-    repeat:['none','daily','weekly','biweekly','monthly'].includes(e.repeat)?e.repeat:'none',
-    repeatUntil:e.repeatUntil||''
-  })).filter(e=>e.date&&/^\d{4}-\d{2}-\d{2}$/.test(e.date));
+  return raw.map(e=>{
+    const cat=CATS[e.cat]?e.cat:'sonstiges';
+    const repeat=['none','daily','weekly','biweekly','monthly'].includes(e.repeat)?e.repeat:'none';
+    return{
+      id:eid(),
+      title:String(e.title||'').trim()||'Unbenannter Termin',
+      cat,
+      courseId:e.courseId&&state.courses.some(c=>c.id===e.courseId)?e.courseId:(targetCourseId||''),
+      date:e.date||fmtD(today),
+      timeStart:e.timeStart||'',
+      timeEnd:e.timeEnd||'',
+      location:e.location||'',
+      note:e.note||'',
+      repeat,
+      repeatUntil:e.repeatUntil||(repeat!=='none'&&sem?sem.lectureEnd:''),
+      skipBreaks:repeat!=='none',
+      exdates:[]
+    };
+  }).filter(e=>e.date&&/^\d{4}-\d{2}-\d{2}$/.test(e.date));
 }
 
 function confirmImport(){
@@ -1829,7 +2728,9 @@ function toast(msg){
   clearTimeout(window._toastT);
   window._toastT=setTimeout(()=>t.classList.remove('show'),1800);
 }
-function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function safeGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function safeSet(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function hexA(hex,a){const h=hex.replace('#','');const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);return `rgba(${r},${g},${b},${a})`}
 
 ['view-today','view-month','view-week','view-courses','view-more'].forEach(id=>{
@@ -1851,6 +2752,17 @@ document.getElementById('view-month').addEventListener('touchend',e=>{
   if(Math.abs(dx)>60&&Math.abs(dy)<40){navMonth(dx<0?1:-1)}
   touchStartX=null;
 },{passive:true});
+
+// Live-Aktualisierung: Jetzt-Karte, Jetzt-Linie und Tageswechsel um Mitternacht
+let lastDay=fmtD(new Date());
+function tick(){
+  const today=fmtD(new Date());
+  if(today!==lastDay){lastDay=today;autoSelectSemester();saveState();renderCurrent();return}
+  if(state.view==='today'){const slot=document.getElementById('now-slot');if(slot)slot.innerHTML=renderNowCard()}
+  else if(state.view==='week')updateWeekNowLine();
+}
+setInterval(tick,30000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick()});
 
 loadState();
 renderCurrent();
